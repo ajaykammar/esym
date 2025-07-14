@@ -9,7 +9,7 @@ import SingupLogin from "./components/SingupLogin";
 import UnityGame from "./components/UnityGame";
 import Physics from "./components/Physics";
 import Chemistry from "./components/Chemistry";
-import Biology from "./components/biology";
+import Biology from "./components/Biology";
 import UnityViewer from "./components/UnityViewer";
 import TopicComponent from "./components/TopicComponent";
 
