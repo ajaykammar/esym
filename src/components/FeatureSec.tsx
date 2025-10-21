@@ -36,20 +36,42 @@ const Data = [
   {
     id: 4,
     icon: "Microscope",
-    heading: "Progress Tracking",
-    pre: "Monitor your learning journey with detailed analytics and personalized feedback",
+    heading: "Flexible & Accessible",
+    pre: "Available on iOS, Android, and web platforms. Learners can access content anytime, anywhere.",
   },
+
   {
     id: 5,
     icon: "Flask",
-    heading: "Progress Tracking",
-    pre: "Monitor your learning journey with detailed analytics and personalized feedback",
+    heading: "Scenario Module",
+    pre: "Adapts based on user responses, helping identify weak areas.",
   },
+
   {
     id: 6,
     icon: "Atom",
     heading: "Progress Tracking",
     pre: "Monitor your learning journey with detailed analytics and personalized feedback",
+  },
+
+  {
+    id: 7,
+    icon: "Dna",
+    heading: "3D Models",
+    pre: "Fast-paced challenges between users to reinforce learning.",
+  },
+
+  {
+    id: 8,
+    icon: "Telescope",
+    heading: "Live Course Module",
+    pre: "Real-time quizzes and feedback in virtual classrooms.",
+  },
+  {
+    id: 9,
+    icon: "Zap",
+    heading: "Multi Challenge Module",
+    pre: "Synchronized group quizzes for collaborative learning.",
   },
 ];
 
@@ -108,7 +130,7 @@ function AutoPlay() {
           <div className="slider-container gap-3 ">
             <Slider {...settings}>
               {Data.map((item) => {
-                const IconComponent = iconMap[item.icon]; // Match icon name to component
+                const IconComponent = iconMap[item?.icon]; // Match icon name to component
                 return (
                   <div className="px-6">
                     <div

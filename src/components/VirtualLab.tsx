@@ -59,7 +59,7 @@ const VirtualLab = () => {
               </h2>
               <RotatingText
                 texts={["Physics", "Chemistry", `Biology`]}
-                mainClassName="px-2 sm:px-2 md:px-3 text-white text-3xl font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg bg-blue-500"
+                mainClassName="px-2 sm:px-2 md:px-3  text-3xl font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg border-2 border-blue-300 bg-blue-200"
                 staggerFrom={"first"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -110,7 +110,7 @@ const VirtualLab = () => {
                   </div>
                   <div className="flex justify-center gap-4 p-8 pt-0">
                     <button className="relative flex justify-center items-center rounded-2xl bg-black font-montserrat shadow-md hover:shadow-lg cursor-pointer overflow-hidden border-none group">
-                      <span className="text-center w-full px-6 py-2 text-white text-md  tracking-widest z-20 transition-all duration-300 ease-in-out group-hover:text-[#183153]">
+                      <span className="text-center w-full px-4  text-white text-md  tracking-widest z-20 transition-all duration-300 ease-in-out group-hover:text-[#183153]">
                         <Link to={lab.link}>Start</Link>
                       </span>
                       <div className="absolute top-0 right-0 h-full w-0 bg-[#ffd402] transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></div>

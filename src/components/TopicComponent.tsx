@@ -9,7 +9,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Data, Biology_Data } from "../Data/Data"; // Import your data file
+import { Data, Biology_Data } from "../Data/Data_old"; // Import your data file
 import DNAViewer from "./3d/DNAViewer";
 
 const TopicComponent = () => {

@@ -4,12 +4,11 @@ import VirtualLab from "../components/VirtualLab";
 import AditionalLab from "../components/AditionalLab";
 import Vidio from "../components/Vidio";
 import FeatureSec from "../components/FeatureSec";
-import Progress from "../components/Progress";
+
 import DetailsSec from "../components/DetailsSec";
-import AddBanner from "../components/AddBanner";
-import Herobanners from "../components/herobanners";
+
 // import DNAViewer from "../components/3d/DNAViewer";
-import banner from "../Images/banners/DIGI SIMU 22.jpg";
+import banner from "../Images/banners/DIGI_SIMU_Growth_23.jpg";
 import banner2 from "../Images/banners/DIGI SIMU 4.jpg";
 const Home = () => {
   return (
@@ -24,11 +23,14 @@ const Home = () => {
       <AditionalLab />
       <Vidio />
       {/* <AddBanner /> */}
-      <img src={banner2} alt="gb" />
+      <div className="w-full h-auto  flex items-center justify-center ">
+        <img src={banner2} alt="gb" className="w-full h-auto " />
+      </div>
 
       <FeatureSec />
-
-      <img src={banner} alt="gb" />
+      <div className="w-full h-auto flex items-center justify-center ">
+        <img src={banner} alt="gb" className="w-full h-auto " />
+      </div>
       {/* <Herobanners /> */}
       {/* <Progress /> */}
     </div>

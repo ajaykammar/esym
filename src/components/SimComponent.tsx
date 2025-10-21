@@ -9,7 +9,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Data } from "../Data/Data"; // Import your data file
+import { Data } from "../Data/Data_old"; // Import your data file
 import DNAViewer from "./3d/DNAViewer";
 
 const SimComponent = () => {

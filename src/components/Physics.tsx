@@ -1,7 +1,8 @@
 import React from "react";
 import ThreeJSTitle from "./ThreeJSTitle";
-import { NavLink } from "react-router-dom";
-import { Data } from "../Data/Data";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Data } from "../Data/Data_old";
+import { toast } from "react-toastify";
 
 // Define the type for each simulation item
 interface SimulationItem {
@@ -15,6 +16,17 @@ interface SimulationItem {
 }
 
 const Physics: React.FC = () => {
+  const user = localStorage.getItem("user") || " {}";
+  const notify = (msg: string) => toast(msg);
+  const Navigate = useNavigate();
+  const UserNavigete = (simulation) => {
+    if (Object.keys(JSON.parse(user)).length > 0) {
+      Navigate(`/simulation/${simulation.id}`);
+    } else {
+      notify("Please log in to access the simulations.");
+    }
+  };
+
   return (
     <>
       <div className="sketchfab-embed-wrapper">
@@ -117,8 +129,8 @@ const Physics: React.FC = () => {
 
                     <div className="relative group mx-auto flex items-center justify-center">
                       <div className="absolute bottom-0 w-[45px] h-[45px] bg-[#3c555d] rounded-full transition-all duration-600 group-hover:w-1/2 group-hover:bg-[#b1dae7]"></div>
-                      <NavLink
-                        to={`/simulation/${simulation.id}`}
+                      <div
+                        onClick={() => UserNavigete(simulation)}
                         className="relative z-10 p-3 flex items-center space-x-2 text-[#234567] font-bold text-lg tracking-wide active:scale-95 transition-all duration-300"
                       >
                         <span>Start</span>
@@ -144,7 +156,7 @@ const Physics: React.FC = () => {
                             fill="none"
                           ></polyline>
                         </svg>
-                      </NavLink>
+                      </div>
                     </div>
                   </div>
                 </div>

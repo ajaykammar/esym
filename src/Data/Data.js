@@ -244,6 +244,8 @@ The rotating shaft can now be used to turn wheels, fans, or gears, completing th
   },
 ];
 
+
+
 export const Biology_Data = [
   {
     id: 1,
@@ -375,7 +377,7 @@ export const Biology_Data = [
     banner: bg5,
     EmbelLink:
       "https://sketchfab.com/models/a7ee28d1db8d4ef2bcc84b8661ce17d3/embed",
-    module3D: null,
+    module3D: "/atrioventricular_septal_defect.glb",
     // module3D: "/Heart.glb",
     Postion: [0, 0, 0],
     category: "Physiology",
@@ -566,4 +568,435 @@ export const Biology_Data = [
     sec4t:
       "Digestion converts the food we eat into energy and nutrients. Understanding it promotes healthy habits and helps prevent issues like indigestion, constipation, or malnutrition.",
   },
+  {
+    id: 11,
+    title: "Human Kidney Anatomy Cross Section",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://png.pngtree.com/png-clipart/20220730/original/pngtree-human-kidney-cross-section-illustration-sees-veins-and-arteries-used-in-png-image_8444800.png",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/0215aaf9e9a243cdafca249a979680b0/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Kidney?",
+    sec1t:
+      "The kidney is a bean-shaped organ that filters waste products and excess fluids from the blood to form urine. It also helps regulate blood pressure, electrolyte levels, and maintain the body’s internal balance. Each kidney contains millions of nephrons, which are the basic filtering units.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a labeled diagram or 3D model to trace the internal structure of a kidney: renal artery (blood in), cortex (filtration), medulla (collection), pyramids (urine flow), calyces (channels), pelvis (urine collection), ureter (urine transport). Label each part and explain its function during a group demonstration or class presentation.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand the structure and function of the kidney.",
+      "Identify parts like renal cortex, medulla, pyramids, pelvis, ureter.",
+      "Learn how nephrons filter blood and form urine.",
+      "Trace the path of urine from blood to bladder.",
+      "Observe how kidneys maintain water and salt balance.",
+      "Understand the role of kidneys in waste removal and detoxification.",
+      "Promote awareness of kidney health and hydration.",
+      "Recognize the effects of diseases like kidney stones or infections.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "The kidneys clean the blood and form urine to remove waste. Understanding kidney structure helps promote good hydration, prevent kidney problems, and maintain overall body health.",
+  },
+  {
+    id: 12,
+    title: "Smoker's lungs VS Non-smoker's lungs",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_5C6Wbu5AZF20anOFtBaGNsfO5skG-fa1A&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/caa644e727484571b6dcc1556a44e8d4/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Difference Between Smoker’s and Non-Smoker’s Lungs?",
+    sec1t:
+      "Smoker’s lungs are damaged due to prolonged exposure to harmful chemicals in cigarettes. They appear blackened, clogged with tar, and have reduced capacity for oxygen exchange. Non-smoker’s lungs are typically pink, healthy, and function efficiently to supply oxygen to the body. The differences affect breathing, stamina, and overall health.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a visual chart or 3D lung model to compare healthy vs diseased lungs. Show differences in color, texture, and function. Label parts like bronchi, alveoli, and lung tissue. Demonstrate how smoking affects airways and oxygen exchange. Discuss symptoms of lung diseases like emphysema and lung cancer using real-life cases or pictures for visual impact.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Identify the structure and function of the lungs and airways",
+      "Understand the harmful effects of smoking on the respiratory system",
+      "Compare the appearance of healthy vs smoker’s lungs",
+      "Learn how tar, nicotine, and carbon monoxide damage lung tissue",
+      "Recognize the signs of respiratory diseases caused by smoking",
+      "Understand the importance of lung capacity and clean air",
+      "Promote anti-smoking awareness and healthy lifestyle choices",
+      "Encourage discussions on prevention, quitting, and lung care.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Smoker’s lungs are blackened and damaged due to tar and toxic chemicals from cigarette smoke. Non-smoker’s lungs remain pink and healthy, allowing better oxygen exchange. Understanding this difference encourages people to avoid smoking and helps prevent lung diseases like bronchitis, emphysema, or lung cancer.",
+  },
+  {
+    id: 13,
+    title: "The Structure of Hemoglobin",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://cdn.prod.website-files.com/621e95f9ac30687a56e4297e/673fe052ac678cb4b2063b82_V2_1730456976590_18c830db-95cd-4680-965e-198d0977995b_HIGH_RES.png",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/223db202d986496ebbf85964f7760992/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Structure of Hemoglobin?",
+    sec1t:
+      "Hemoglobin is an iron-containing protein found in red blood cells responsible for carrying oxygen from the lungs to tissues and returning carbon dioxide to the lungs. It has a quaternary structure made up of four polypeptide chains—two alpha and two beta chains—each with an iron-rich heme group that binds to oxygen. This structure allows hemoglobin to carry up to four oxygen molecules at a time, enabling efficient oxygen transport in the body.",
+
+    sec2h: "Activity",
+    sec2t:
+      "Use a 3D model or diagram to explore hemoglobin’s quaternary structure. Highlight the four subunits (2 alpha and 2 beta chains) and locate the heme groups. Demonstrate how oxygen binds to iron in each heme. Show how shape changes when oxygen binds (cooperative binding). Compare normal hemoglobin with mutated forms like sickle-cell hemoglobin to show how structure affects function and health.",
+
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand the composition and function of hemoglobin",
+      "Identify the four subunits and heme groups in hemoglobin",
+      "Explain how hemoglobin carries oxygen and carbon dioxide",
+      "Learn about the role of iron in oxygen binding",
+      "Understand cooperative binding and oxygen affinity",
+      "Compare normal and abnormal hemoglobin (e.g., HbA vs HbS)",
+      "Recognize how hemoglobin supports respiration and energy",
+      "Discuss how hemoglobin disorders affect health (like anemia or sickle-cell disease)",
+    ],
+
+    sec4h: "Why It Matters",
+    sec4t:
+      "Hemoglobin plays a vital role in oxygen transport and is essential for life. Its unique structure allows it to pick up oxygen in the lungs and deliver it to tissues throughout the body. Understanding hemoglobin helps us learn how the body functions, what causes conditions like anemia or sickle cell disease, and why iron is crucial in our diet. A deeper knowledge of hemoglobin supports awareness of respiratory and blood-related health issues.",
+  },
+  {
+    id: 14,
+    title: "Capillary Cross Section",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4lBwvOcwrQ2yBrjF7JmhQrjLkYYu05Rv6HA&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/45a708382714453ebc866e82c7ab47c4/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is a Capillary?",
+    sec1t:
+      "Capillaries are the smallest blood vessels in the body and serve as the connection between arteries and veins. Their thin, one-cell-thick walls allow for the exchange of oxygen, carbon dioxide, nutrients, and waste between the blood and surrounding tissues. These microscopic vessels form dense networks (capillary beds) that reach nearly every cell in the body, ensuring effective delivery and removal of substances.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a labeled diagram or 3D model to explore a cross-section of a capillary. Identify the single layer of endothelial cells that make up the wall, and observe red blood cells moving through in single file. Demonstrate how oxygen and nutrients exit the blood while carbon dioxide and waste enter. Compare this structure to arteries and veins in terms of thickness and function. Encourage students to model the diffusion process in an interactive classroom setup.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand the basic structure and function of capillaries.",
+      "Identify endothelial cells and their role in capillary walls.",
+      "Learn how diffusion occurs across the capillary wall.",
+      "Recognize the importance of capillary beds in tissue health.",
+      "Compare capillaries with arteries and veins structurally and functionally.",
+      "Explore how oxygen, nutrients, and waste are exchanged in capillaries.",
+      "Understand how blood pressure affects capillary exchange.",
+      "Recognize how diseases like diabetes or hypertension can affect capillary function.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Capillaries play a critical role in maintaining the body’s internal environment by enabling the exchange of gases and nutrients with tissues. Understanding their structure and function helps us see how oxygen reaches our cells and how waste is removed. This knowledge is vital for learning how the circulatory system supports life and how certain health conditions can disrupt this balance.",
+
+  },
+  {
+    id: 15,
+    title: "Covid 19 Virus",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1920v.jpg?sfvrsn=4dba955c_19",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/01c083362df04291bd0ba380fb299838/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the COVID-19 Virus?",
+    sec1t:
+      "COVID-19 is a disease caused by the novel coronavirus SARS-CoV-2. It primarily spreads through respiratory droplets when an infected person coughs, sneezes, or talks. The virus mainly affects the respiratory system but can impact other organs as well. Common symptoms include fever, cough, fatigue, and loss of taste or smell. In severe cases, it can lead to pneumonia, organ failure, or death, especially in older adults or people with preexisting health conditions.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a labeled diagram or animation to explore the structure of the coronavirus. Highlight key parts such as the spike protein, envelope, RNA genome, and lipid membrane. Show how the virus attaches to and enters human cells using the spike protein and ACE2 receptors. Create a timeline or flowchart showing how infection progresses in the body and how the immune system responds. Discuss safety measures like wearing masks, washing hands, and vaccines.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand what COVID-19 is and how it spreads.",
+      "Identify the structure of the coronavirus (SARS-CoV-2).",
+      "Explain how the virus enters and infects human cells.",
+      "Recognize common symptoms and potential complications of COVID-19.",
+      "Learn how the immune system fights the virus.",
+      "Understand the importance of vaccines and how they work.",
+      "Promote awareness of preventive measures like hygiene and distancing.",
+      "Recognize the global impact of COVID-19 on health and society.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "COVID-19 has affected millions of lives around the world. Learning about the virus helps us understand how it spreads, how our bodies respond, and how we can protect ourselves and others. This knowledge is essential for staying safe, supporting public health, and being prepared for future outbreaks.",
+
+  },
+  {
+    id: 16,
+    title: "Shapes of bacteria",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://microbeonline.com/wp-content/uploads/2021/05/Basic-morphologies-of-various-bacteria.png",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/2ac949aba46c4adfa722be0c99281d66/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What are the Shapes of Bacteria?",
+    sec1t:
+      "Bacteria are microscopic single-celled organisms that come in various shapes. The three main shapes are **coccus** (spherical), **bacillus** (rod-shaped), and **spirillum** (spiral or curved). Some bacteria may form chains, clusters, or pairs based on how they divide and grow. These shapes help scientists classify bacteria and understand their behavior, mobility, and how they cause disease.",
+    sec2h: "Activity",
+    sec2t:
+      "Use labeled diagrams or 3D models to identify and compare the different shapes of bacteria: coccus (round), bacillus (rod), and spirillum (spiral). Create clay or paper models to visualize the shapes. Arrange models into common groupings like streptococci (chains), staphylococci (clusters), and diplobacilli (pairs). Discuss how shape affects movement and interaction with host cells, and how it helps in bacterial identification in labs.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand that bacteria come in different shapes.",
+      "Identify the three main bacterial shapes: coccus, bacillus, and spirillum.",
+      "Learn about bacterial groupings like chains and clusters.",
+      "Recognize how shape helps classify and identify bacteria.",
+      "Explore how shape affects mobility and infection potential.",
+      "Understand the role of bacteria in health, environment, and disease.",
+      "Compare bacterial shapes under a microscope (real or virtual).",
+      "Relate bacterial shape to examples of diseases they may cause.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Recognizing the shapes of bacteria helps scientists and doctors identify the type of bacteria causing an infection. This knowledge is important for choosing the right treatment and understanding how bacteria behave. Learning about bacterial shapes also helps students appreciate the diversity and roles of microorganisms in health, disease, and the environment.",
+
+  },
+  {
+    id: 17,
+    title: "Differences Between Archaea and Bacteria",
+    description: "Biology | Human Body | Digestion",
+    image:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS76C7ArvjjcN2qUctqkBzVU6Tb0RmOY6x53Q&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/dba461f743a94941bd269709a72ae38b/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Difference Between Archaea and Bacteria?",
+    sec1t:
+      "Archaea and Bacteria are both single-celled microorganisms without a nucleus (prokaryotes), but they belong to different domains of life. While they look similar under a microscope, they differ in many ways. Archaea have unique cell membranes and genetic material more similar to eukaryotes (like humans), while bacteria have different structures and chemical makeup. Archaea often live in extreme environments, such as hot springs or salt lakes, while bacteria are found almost everywhere, including soil, water, and the human body.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a comparison chart or Venn diagram to list similarities and differences between archaea and bacteria. Examine labeled diagrams showing their structures. Research environments where archaea are found (like deep-sea vents) and compare with habitats of bacteria. Discuss examples of how each type of organism impacts human life — like helpful gut bacteria or methane-producing archaea. You can also model their membranes and shapes using craft materials.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand that archaea and bacteria are both prokaryotes.",
+      "Identify structural differences in their cell walls and membranes.",
+      "Learn that archaea have genetic similarities to eukaryotes.",
+      "Compare their habitats and preferred living conditions.",
+      "Recognize how archaea survive in extreme environments.",
+      "Explore the roles of bacteria and archaea in ecosystems.",
+      "Understand their importance in biotechnology and research.",
+      "Use charts or diagrams to visually compare their features.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Knowing the difference between archaea and bacteria helps us better understand the diversity of life on Earth. Archaea provide insights into evolution and how life can survive in extreme conditions. Bacteria impact our health, environment, and industry. Learning about both helps in scientific research, medicine, and understanding Earth’s earliest life forms.",
+
+  },
+  {
+    id: 18,
+    title: "Bacteria and fungal yeast",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIwE1DCMV-BC5mgKj5TErQrMJNjQRkAZRs1Sib6WdjRS688cnq2xMCCiq7OD2LxpdQaY&usqp=CAU",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/2652f18e3b9b47f9835b23e2e63a3e62/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What are Bacteria and Fungal Yeast?",
+    sec1t:
+      "Bacteria and fungal yeast are both microorganisms, but they belong to different biological kingdoms. Bacteria are single-celled **prokaryotes**, meaning they have no true nucleus or organelles. They reproduce quickly and are found almost everywhere — in soil, water, food, and the human body. Fungal yeast, on the other hand, are **eukaryotes**, meaning they have a defined nucleus and organelles. Yeast is a type of fungus that is mostly single-celled and is commonly used in baking and fermentation. While both can be beneficial or harmful, they differ greatly in structure, function, and complexity.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a comparison chart or microscope images to observe bacteria and yeast. Identify key differences such as cell structure (nucleus, cell wall type), reproduction methods, and size. Conduct a simple experiment like making dough rise using yeast to observe fermentation. Compare it with bacteria cultures from yogurt or soil. Create a model showing the difference between prokaryotic (bacteria) and eukaryotic (yeast) cells using craft materials.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand that bacteria are prokaryotes and yeast are eukaryotes.",
+      "Identify structural differences such as the presence of a nucleus.",
+      "Explore how bacteria and yeast reproduce (binary fission vs budding).",
+      "Compare their roles in food, health, and industry.",
+      "Recognize beneficial types like probiotic bacteria and baking yeast.",
+      "Learn how both can also cause infections or spoilage.",
+      "Observe bacterial and yeast growth through simple lab activities.",
+      "Understand their importance in biotechnology and everyday life.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Bacteria and yeast are important to human life. While some cause illness, many are essential in making food, aiding digestion, and even creating medicines. Understanding their differences helps us use them safely and effectively in health, science, and industry. It also teaches us how diverse and fascinating microscopic life can be.",
+
+  },
+  {
+    id: 19,
+    title: "Good and bad bacterial flora",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://www.shutterstock.com/image-vector/good-bacteria-bad-enteric-intestinal-600w-380527045.jpg",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/b98ef0450f8f417d84764a3c3116af65/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is Good and Bad Bacterial Flora?",
+    sec1t:
+      "Bacterial flora refers to the community of bacteria living in and on our bodies, especially in places like the gut, skin, mouth, and respiratory tract. Some bacteria are **beneficial (good flora)** and help with digestion, vitamin production, and protecting against harmful microbes. Others can be **harmful (bad flora)** if they grow too much or invade places they shouldn't be, leading to infections or disease. A healthy balance between good and bad bacteria is essential for maintaining overall health.",
+    sec2h: "Activity",
+    sec2t:
+      "Use diagrams or infographics to show examples of good and bad bacteria in the human body. Create a chart listing helpful bacteria (like *Lactobacillus* or *Bifidobacterium*) and harmful ones (like *Salmonella* or *E. coli*). Conduct a classroom discussion or experiment showing how probiotics (good bacteria in yogurt) affect digestion. You can also simulate bacterial balance using colored beads or blocks to visualize how imbalance affects the body.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand what bacterial flora is and where it lives in the body.",
+      "Identify examples of good bacteria and their functions.",
+      "Recognize harmful bacteria and how they cause illness.",
+      "Explore how good flora prevents infection by outcompeting bad bacteria.",
+      "Learn how diet, antibiotics, and hygiene affect bacterial balance.",
+      "Understand the importance of probiotics and gut health.",
+      "Compare symptoms of bacterial imbalance (like in food poisoning or infections).",
+      "Promote awareness of maintaining a healthy microbial balance.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Good bacteria support digestion, immunity, and overall health, while harmful bacteria can cause infections and diseases. Understanding the difference helps us make healthy choices, use antibiotics responsibly, and appreciate the role of microbes in keeping our bodies functioning properly.",
+
+  },
+  {
+    id: 20,
+    title: "Complete Human Head Anatomy",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhciX8EcHVVX228I2Ag4D1pIEGDDHC7nGqeg&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/c240eee6c2824f8cbb105129392711b2/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Anatomy of the Human Head?",
+    sec1t:
+      "The human head is a complex structure made up of the **skull, brain, facial bones, muscles, sensory organs**, and important systems like the nervous and circulatory systems. It houses the **brain**, which controls all body functions; the **eyes, ears, nose, and mouth**, which handle sensory input; and the **skull**, which protects the brain. Key areas include the **cranium, mandible (jawbone), facial muscles**, blood vessels, and cranial nerves. Together, these parts enable thinking, speaking, breathing, eating, and sensing the environment.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a 3D model, diagram, or virtual anatomy tool to explore the human head in layers—starting with the skull and moving inward to the brain and internal organs. Label the **cranium, mandible, eyes, ears, nasal cavity, mouth, brain lobes**, and major nerves like the optic and facial nerves. Conduct a class presentation or quiz to reinforce the names and functions of each part. Include hands-on activities like assembling a head model or identifying parts on a worksheet.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Identify major bones in the human skull (cranium, mandible, etc.).",
+      "Understand the location and function of brain regions (lobes, cerebellum, brainstem).",
+      "Label sensory organs like the eyes, ears, nose, and mouth.",
+      "Learn about facial muscles used in expressions and speech.",
+      "Recognize the role of cranial nerves in sensation and movement.",
+      "Explore how the head protects the brain and supports sensory input.",
+      "Understand the role of blood vessels in supplying the brain and face.",
+      "Appreciate the head’s function in communication, thinking, and survival.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "The human head contains critical organs that control thought, sensation, and basic survival functions. Understanding its anatomy helps us know how we think, see, hear, speak, and stay alive. It also supports medical knowledge, safety awareness, and appreciation of how the body works in harmony.",
+
+  },
+  {
+    id: 21,
+    title: "Complete Human Anatomy",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3l9coELEDiEwkaezvAwMbvYSThP6PCZfvlw&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/c904a5a65ae145a0bc535645c7e693af/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is Complete Human Anatomy?",
+    sec1t:
+      "Human anatomy is the study of the structure of the human body. It includes all organs, tissues, and systems that work together to keep us alive and functioning. The body is organized into **major systems** such as the skeletal, muscular, circulatory, nervous, respiratory, digestive, excretory, endocrine, immune, and reproductive systems. Each system contains specific organs that perform vital functions. Human anatomy helps us understand how the body is built and how it works—from the bones and muscles to the brain, heart, and lungs.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a full-body diagram or 3D model to explore the human body system by system. Label organs in each system (e.g., heart in circulatory, lungs in respiratory, brain in nervous system). Conduct a group project where each team presents a different system. Use puzzles, posters, or clay models to visualize internal organs. Include simple experiments or health facts that relate to real-life situations (e.g., how the lungs expand when we breathe or how the heart beats faster during exercise).",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Identify the major systems of the human body.",
+      "Understand the function of each system (skeletal, muscular, etc.).",
+      "Label key organs like the brain, heart, lungs, liver, kidneys, and intestines.",
+      "Learn how different body systems work together to maintain life.",
+      "Recognize the importance of bones, muscles, nerves, and blood flow.",
+      "Understand how nutrition, exercise, and health choices affect body systems.",
+      "Compare male and female reproductive anatomy.",
+      "Appreciate the complexity and coordination of human biology.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "Understanding complete human anatomy gives us a deeper appreciation of how our bodies function. It helps us make informed health decisions, understand medical care, and recognize signs when something is wrong. Studying anatomy is essential for careers in medicine, sports, biology, and everyday life awareness of personal health and well-being.",
+
+  },
+  {
+    id: 22,
+    title: "Neurves system",
+    description: "Biology | Human Body | Digestion",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ8NlvumUT-cg9Hgptc6hPF_iCT6J8kiE43g&s",
+    // icon: Beaker,
+    banner: bg6,
+    EmbelLink:
+      "https://sketchfab.com/models/3db707928e274e3bb72b3f7536a2da17/embed",
+    module3D: null,
+    Postion: [0, 0, 0],
+    category: "Human Biology",
+    difficulty: "Beginner",
+    sec1h: "What is the Nervous System?",
+    sec1t:
+      "The nervous system is the body's communication network that controls and coordinates all body activities. It includes the **brain, spinal cord**, and **nerves** that run throughout the body. The nervous system is divided into the **central nervous system (CNS)**—which includes the brain and spinal cord—and the **peripheral nervous system (PNS)**, which includes all other nerves. It allows us to think, move, feel, and respond to the environment by sending electrical signals between the brain and body.",
+    sec2h: "Activity",
+    sec2t:
+      "Use a labeled diagram or interactive 3D model to explore the parts of the nervous system. Identify the brain, spinal cord, and major nerves. Trace how signals travel from sensory organs to the brain and back to muscles. Create a simple model using strings and paper to represent how messages are sent. Perform a reaction time activity using a ruler drop experiment to demonstrate how quickly the nervous system responds to stimuli.",
+    sec3h: "Learning Objectives",
+    sec3t: [
+      "Understand the structure and function of the nervous system.",
+      "Identify the brain, spinal cord, and peripheral nerves.",
+      "Learn how the central and peripheral nervous systems work together.",
+      "Recognize the role of neurons in transmitting signals.",
+      "Understand the difference between voluntary and involuntary actions.",
+      "Explore how the brain controls thoughts, movement, and senses.",
+      "Learn how reflexes work and why they happen quickly.",
+      "Discuss the effects of nervous system disorders like epilepsy or paralysis.",
+    ],
+    sec4h: "Why It Matters",
+    sec4t:
+      "The nervous system controls everything from breathing and heartbeat to thinking and feeling. It helps us interact with the world and keeps our body working properly. Learning about the nervous system helps us understand brain function, how we react to danger, how injuries affect movement, and why protecting the brain and spine is important for health and safety.",
+  }
 ];

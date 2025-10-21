@@ -1,6 +1,6 @@
-import React from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Text, OrbitControls, Stars } from '@react-three/drei';
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Text, OrbitControls, Stars } from "@react-three/drei";
 
 export default function ThreeJSTitle() {
   return (
@@ -8,7 +8,15 @@ export default function ThreeJSTitle() {
       <Canvas camera={{ position: [0, 0, 5] }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+        <Stars
+          radius={100}
+          depth={50}
+          count={5000}
+          factor={4}
+          saturation={0}
+          fade
+          speed={1}
+        />
         <Text
           fontSize={1.5}
           position={[-2, 0, 0]}
@@ -20,9 +28,9 @@ export default function ThreeJSTitle() {
           letterSpacing={0.02}
           textAlign="center"
         >
-          EduSim
+          Mantrixlab
         </Text>
-        <OrbitControls 
+        <OrbitControls
           enableZoom={false}
           enablePan={false}
           enableRotate={true}

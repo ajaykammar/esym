@@ -19,19 +19,19 @@ import img3 from "../Images/Learning-cuate.svg";
 
 const additionalLabs = [
   {
-    title: "Astronomy Lab",
+    title: "Physics Lab",
     icon: <Telescope className="h-6 w-6 text-purple-600" />,
     imgs: img1,
     description: "Explore the cosmos through virtual telescopes",
   },
   {
-    title: "Genetics Lab",
+    title: "Biology Lab",
     icon: <Dna className="h-6 w-6 text-emerald-600" />,
     imgs: img2,
-    description: "Study DNA and genetic inheritance patterns",
+    description: "Study genetics, human organs and anatomy.",
   },
   {
-    title: "Energy Lab",
+    title: "Chemistry Lab",
     icon: <Zap className="h-6 w-6 text-amber-600" />,
     imgs: img3,
     description: "Investigate the nature of energy and its uses",
