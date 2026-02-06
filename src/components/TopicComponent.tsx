@@ -9,13 +9,19 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Data, Biology_Data } from "../Data/Data_old"; // Import your data file
+// import { Data, Biology_Data } from "../Data/Data_old"; // Import your data file
+import { Physics_Data, Chemistry_Data, Biology_Data } from "../Data/Data";
+
 import DNAViewer from "./3d/DNAViewer";
 
 const TopicComponent = () => {
   const { id } = useParams(); // Access the 'id' parameter from the URL
 
-  const matchedData = Biology_Data.find((item) => item.id === parseInt(id)); // Find the data matching the ID
+  const matchedData = [
+    ...Physics_Data,
+    ...Chemistry_Data,
+    ...Biology_Data,
+  ].find((item) => item.id === parseInt(id)); // Find the data matching the ID
 
   // Animation References
   useEffect(() => {
@@ -161,7 +167,7 @@ const TopicComponent = () => {
                             ))}
                         </ul> */}
             <p>
-              {matchedData.sec3t.map((item) => (
+              {matchedData?.sec3t?.map((item: any) => (
                 <li>{item}</li>
               ))}
             </p>

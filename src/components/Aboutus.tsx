@@ -15,16 +15,30 @@ import {
   FaGithub,
   FaQuoteLeft,
 } from "react-icons/fa";
-import { TiTickOutline } from "react-icons/ti";
+import avatar from "../Images/avtar.jpg";
 import { motion } from "framer-motion";
 
 const Aboutus = () => {
   const team = [
     {
-      name: "Sarah Johnson",
-      designation: "Lead Developer",
-      role: "Full Stack Engineer",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      name: "Mahesh Patil",
+      designation: "Team Lead",
+      role: "Project Planning & Task Management ,Team Coordination",
+      img: avatar,
+      socials: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+
+    {
+      name: "Mrigank Sharma",
+      designation: "Unity Developer",
+      role: "Design and Developt , Deployment",
+      // img: "https://randomuser.me/api/portraits/men/46.jpg",
+      img: avatar,
+
       socials: {
         linkedin: "#",
         twitter: "#",
@@ -32,10 +46,12 @@ const Aboutus = () => {
       },
     },
     {
-      name: "David Smith",
-      designation: "Project Manager",
-      role: "Agile & Scrum Specialist",
-      img: "https://randomuser.me/api/portraits/men/46.jpg",
+      name: "AJAY K",
+      designation: "Software Developer",
+      role: "Design and Developt , Deployment",
+      // img: "https://randomuser.me/api/portraits/men/46.jpg",
+      img: avatar,
+
       socials: {
         linkedin: "#",
         twitter: "#",
@@ -43,10 +59,24 @@ const Aboutus = () => {
       },
     },
     {
-      name: "Emily Carter",
-      designation: "UI/UX Designer",
+      name: "Nagraj Hajagulkar",
+      designation: "Associate Developer",
+      role: "Design and Developt , Deployment",
+      // img: "https://randomuser.me/api/portraits/men/46.jpg",
+      img: avatar,
+
+      socials: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+    {
+      name: "Amruta Kammar",
+      designation: "Education Specialist",
       role: "Design & Branding",
-      img: "https://randomuser.me/api/portraits/women/65.jpg",
+      // img: "https://randomuser.me/api/portraits/women/65.jpg",
+      img: avatar,
       socials: {
         linkedin: "#",
         twitter: "#",
@@ -368,7 +398,7 @@ const Aboutus = () => {
               <p className="text-indigo-600 font-medium">
                 {member.designation}
               </p>
-              <p className="text-gray-500 mb-4">{member.role}</p>
+              {/* <p className="text-gray-500 mb-4">{member.role}</p> */}
               <div className="flex justify-center gap-4">
                 <a
                   href={member.socials.linkedin}

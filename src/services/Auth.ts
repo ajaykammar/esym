@@ -85,7 +85,7 @@ export const LoginWithGoogle = async (
 
 // Get Profile
 export const Profile = async (id: string): Promise<UserProfile> => {
-  const { data } = await api.get<UserProfile>(`/api/user/profile/${id}`);
+  const { data } = await api.get<UserProfile>(`/api/students/${id}`);
   return data;
 };
 

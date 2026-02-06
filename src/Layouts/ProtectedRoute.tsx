@@ -5,7 +5,7 @@ interface ProtectedRouteProps {
   children: JSX.Element;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = () => {
   const user = localStorage.getItem("user");
 
   if (!user) {

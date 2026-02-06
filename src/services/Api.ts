@@ -7,8 +7,10 @@ import axios, {
 
 // Create axios instance with baseURL
 const api: AxiosInstance = axios.create({
+  // baseURL: "http://localhost:3000/",
+  baseURL: "https://mantrixlab.com/",
   // baseURL: "http://103.185.75.254:3000", // ✅ replace with your backend URL
-  baseURL: "http://localhost:3000", // ✅ replace with your backend URL
+  // baseURL: "http://localhost:3000", // ✅ replace with your backend URL
   headers: {
     "Content-Type": "application/json",
   },

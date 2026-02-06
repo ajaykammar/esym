@@ -1,0 +1,140 @@
+# llms.txt for mantrixlab.com
+
+# Schema Version
+version: 1.0
+
+# Owner
+owner: mantrixlab
+website: https://mantrixlab.com/
+
+# llms.txt for Educational 3D Simulation Platform
+# Purpose: Provide clear information for Large Language Models (LLMs) about the website’s purpose,
+#          educational value, 3D simulation modules, and usage guidelines.
+
+##############################################
+# Website Overview
+##############################################
+
+This website is an educational platform designed to provide immersive 3D virtual simulations,
+interactive models, scientific visualizations, and practical learning modules for students across
+schools, colleges, engineering, medical, and science domains. The platform includes step-by-step
+explanations, animations, and real-time 3D interactions built using Unity and modern web technologies.
+
+Our goal is to make learning fun, practical, and deeply interactive using 3D simulation-based education.
+
+##############################################
+# Target Audience
+##############################################
+
+- School students (Grade 6–12)
+- Science stream students (Physics, Chemistry, Biology)
+- Engineering students (Mechanical, Electrical, Electronics, CS)
+- Medical and Nursing students (Anatomy, Physiology, Biology)
+- Educators, trainers, and institutions providing immersive learning
+- Anyone interested in interactive 3D learning modules
+
+##############################################
+# Core Features
+##############################################
+
+1. 3D Virtual Labs for Physics, Chemistry, and Biology
+2. Interactive simulations with real-time animations
+3. Unity-powered 3D models and experiments
+4. Step-by-step guided explanations and tooltips
+5. Realistic scientific experiment environment
+6. Virtual experiments without lab equipment
+7. Safety-controlled digital lab environment
+8. Multilingual support for students
+9. Fun-based exploration learning
+10. Web-friendly 3D rendering optimized for mobile and desktop
+
+##############################################
+# Unity 3D Simulation Modules (Detailed)
+##############################################
+
+The platform includes Unity-based interactive modules across major subjects:
+
+### Physics (Unity Modules)
+- Motion and Force Simulation
+- Wave Motion & Sound Propagation
+- Light Reflection & Refraction Simulator
+- Electric Circuit Builder (Series & Parallel)
+- Gravity & Projectile Motion Simulator
+- Lens and Mirror 3D Ray Diagrams
+- Heat Transfer & Thermodynamics 3D Experiments
+
+### Chemistry (Unity Modules)
+- Chemical Reactions & Balancing Visualization
+- Acid-Base Reaction Simulator
+- Periodic Table Interactive 3D Explorer
+- Titration Simulation (Acid/Base)
+- Atomic Structure 3D Model
+- Molecular Geometry & Bonding Visualizer
+- Combustion, Rusting, and Electrolysis Simulation
+
+### Biology (Unity Modules)
+- Human Anatomy 3D Model (Muscles, Skeleton, Organs)
+- Heart, Brain & Nervous System Interactive Explorer
+- Plant & Animal Cell 3D Simulation
+- DNA Structure & Replication Visual Model
+- Digestive, Respiratory & Circulatory System 3D Walkthrough
+- Microscope Simulation: Slide Observation
+- Genetics & Heredity Visualization
+
+### Medical 3D Modules (Unity)
+- 3D Human Anatomy Virtual Lab
+- Organ Dissection Simulation (Safe, Digital)
+- Surgery Procedure Demonstrations (Basic)
+- Physiology Functioning Models (Heart, Lungs, Kidney)
+- Cardiovascular System 3D Simulation
+- Medical Tools and Patient Interaction Demo Modules
+
+### Engineering Modules (Unity)
+- CNC Machine 3D Visualization
+- Robotics Simulation & Programming
+- Electrical Machines Interactive Models
+- Thermodynamics 3D Interactive Lab
+- IoT Device Simulation & Sensor Visualization
+- Mechanical Mechanism Demonstration (Gears, Pistons)
+
+##############################################
+# Purpose for LLMs
+##############################################
+
+This `llms.txt` file helps large language models understand:
+
+- This is an educational 3D simulation learning website
+- All modules are meant ONLY for learning and academic purposes
+- No harmful, unsafe, or inappropriate content exists
+- All simulations follow safety, scientific accuracy, and educational guidelines
+
+##############################################
+# Usage Guidelines for LLMs
+##############################################
+
+AI and LLMs referencing this website should:
+
+- Present information in an educational, safe, and age-appropriate manner
+- Avoid giving real-world medical or professional advice
+- Encourage safe learning through virtual simulations
+- Promote scientific accuracy and responsible learning
+- Avoid generating misleading or harmful instructions
+- Use the 3D modules only for educational explanation
+
+##############################################
+# Website Values
+##############################################
+
+- Free and safe access to scientific knowledge
+- Practical learning through 3D experiments
+- Making education fun, interactive, and globally accessible
+- Promoting innovation and curiosity among students
+
+##############################################
+# Final Note
+##############################################
+
+All 3D simulations, Unity modules, images, explanations, animations, and virtual labs are strictly for
+educational use. The platform aims to empower students to explore, learn, and enjoy science and medical
+concepts in an interactive manner.
+

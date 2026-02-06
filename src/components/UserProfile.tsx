@@ -15,7 +15,7 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { Profile } from "../services/Auth";
-
+import avtar from "../Images/avtar.jpg";
 const UserProfile: React.FC = () => {
   const [activeTab, setActiveTab] = useState("personal");
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -26,9 +26,8 @@ const UserProfile: React.FC = () => {
     queryFn: () => Profile(_id),
   });
 
-  const user = data?.data;
-
-  if (isLoading) return <p>Loading...</p>;
+  const user = data;
+  console.log(data);
 
   // ✅ Logout function
   const handleLogout = () => {
@@ -55,11 +54,7 @@ const UserProfile: React.FC = () => {
           <section className="profile-header">
             <div className="profile-avatar-section">
               <div className="avatar-container">
-                <img
-                  src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                  alt="Profile"
-                  className="profile-avatar"
-                />
+                <img src={avtar} alt="Profile" className="profile-avatar" />
                 <button className="avatar-upload-btn">
                   <FaCamera />
                 </button>
@@ -99,13 +94,14 @@ const UserProfile: React.FC = () => {
             <div className="tab-navigation">
               {[
                 { id: "personal", icon: <FaUser />, label: "Personal Info" },
-                { id: "security", icon: <FaShieldAlt />, label: "Security" },
-                {
-                  id: "preferences",
-                  icon: <FaSlidersH />,
-                  label: "Preferences",
-                },
-                { id: "privacy", icon: <FaLock />, label: "Privacy" },
+                // { id: "security", icon: <FaShieldAlt />, label: "Security" },
+
+                // {
+                //   id: "preferences",
+                //   icon: <FaSlidersH />,
+                //   label: "Preferences",
+                // },
+                // { id: "privacy", icon: <FaLock />, label: "Privacy" },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -246,7 +242,7 @@ const UserProfile: React.FC = () => {
           </section>
 
           {/* ✅ Logout Button at End */}
-          <div className="logout-container text-center mt-8">
+          <div className="logout-container text-center m-8 w-full flex items-center justify-center">
             <button
               className="btn-danger flex items-center gap-2 px-6 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
               onClick={handleLogout}

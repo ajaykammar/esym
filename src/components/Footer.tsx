@@ -5,9 +5,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-10 px-6">
       {/* Visit Labster */}
       <div>
-        <h3 className="text-lg font-bold mb-4">
-          Visit Mantrixlab.com Homepage
-        </h3>
+        <h3 className="text-lg font-bold mb-4">MantrixLab</h3>
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Product Section */}
@@ -104,7 +102,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="text-center mt-6 border-t border-gray-600 pt-6 text-sm text-gray-400">
-        <p>© 2025 Mantrixlab, ApS</p>
+        <p>© 2025 Mantrixlab</p>
         <p className="hover:text-blue-400 cursor-pointer mt-2">
           <a href="#">Privacy Settings</a>
         </p>

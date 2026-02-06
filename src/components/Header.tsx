@@ -3,16 +3,17 @@ import { CircleUser, GraduationCap, Menu, X, ChevronDown } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import AuthModal from "./Auth/AuthModal";
+import Logo from "../Images/logo.png";
 import { useMutation } from "@tanstack/react-query";
 import {
-  Login,
   LoginWithGoogle,
   StudentLogin,
   studentsRegUser,
 } from "../services/Auth";
 import { toast } from "react-toastify";
-
+import useToggleStore from "../features/useToggleStore";
 export default function Header() {
+  const { isOpen, toggle, open, close } = useToggleStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [Loginpopup, setLoginpopup] = useState(false);
   const [scroll, setScroll] = useState(false);
@@ -40,7 +41,8 @@ export default function Header() {
         popupRef.current &&
         !popupRef.current.contains(event.target as Node)
       ) {
-        setLoginpopup(false);
+        // setLoginpopup(false);
+        toggle();
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -62,7 +64,9 @@ export default function Header() {
       localStorage.setItem("user", JSON.stringify(data));
       localStorage.setItem("token", data?.token);
       notify("Register successful");
-      setLoginpopup(false);
+      // setLoginpopup(false);
+
+      toggle();
     },
 
     onError: (error: any) => {
@@ -74,13 +78,18 @@ export default function Header() {
     mutationKey: ["StudentLogin"],
     mutationFn: StudentLogin,
     onSuccess: (data) => {
+      console.log(data);
       localStorage.setItem("user", JSON.stringify(data));
       localStorage.setItem("token", data?.token);
       notify("login successful");
-      setLoginpopup(false);
+      toggle();
+
+      // setLoginpopup(false);
+      close();
     },
 
     onError: (error: any) => {
+      console.log(error);
       notify(error?.response.data.message);
     },
   });
@@ -89,10 +98,13 @@ export default function Header() {
     mutationKey: ["StudentLogin"],
     mutationFn: LoginWithGoogle,
     onSuccess: (data) => {
-      localStorage.setItem("user", JSON.stringify(data));
+      localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("token", data?.token);
       notify("login successful");
-      setLoginpopup(false);
+      // setLoginpopup(false);
+      toggle();
+
+      close();
     },
 
     onError: (error: any) => {
@@ -103,14 +115,15 @@ export default function Header() {
     console.log("Login data:", data);
     LoginMutation.mutate(data);
     // toast.success("Login submitted!");
-    setLoginpopup(false);
+    // setLoginpopup(false);
   };
 
   const handleRegister = (data: any) => {
     console.log("Register data:", data);
     studentsRegUserMutation.mutate(data);
     // toast.success("Registration submitted!");
-    setLoginpopup(false);
+    // setLoginpopup(false);
+    toggle();
   };
 
   const handleOtpVerify = (otp: string) => {
@@ -130,9 +143,12 @@ export default function Header() {
     >
       {/* Popup */}
       <div className="absolute top-[50px] right-0 w-full">
-        {Loginpopup && (
+        {isOpen && (
           <AuthModal
-            onClose={() => setLoginpopup(false)}
+            onClose={() =>
+              // setLoginpopup(false)
+              toggle()
+            }
             onLogin={handleLogin}
             onRegister={handleRegister}
             onOtpVerify={handleOtpVerify}
@@ -145,14 +161,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-[60px]">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <GraduationCap className="h-10 w-10 text-blue-300" />
+            {/* <GraduationCap className="h-10 w-10 text-blue-300" /> */}
+            <img src={Logo} alt="Logo" className="h-10 w-auto" />
             <Link to={"/"}>
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-indigo-100">
-                Mantrixlab
+              <span className="text-3xl font-bold bg-clip-text text-transparent bg-[#d4dce9] from-[#d4dce9] via-#1a62e8 to-[#96c1e7]">
+                MantrixLab
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <NavLink to={""} className="nav-link">
@@ -164,8 +180,8 @@ export default function Header() {
 
             {/* Resources dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 nav-link">
-                <span>Resources</span>
+              <button className="flex items-center  nav-link">
+                <span className="text-white ">Resources</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               <div className="absolute left-0 mt-2 hidden group-hover:block bg-white text-black rounded-lg shadow-lg py-2 w-44">
@@ -189,7 +205,7 @@ export default function Header() {
                 </NavLink>
                 <NavLink
                   to="/research"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100 text-whi"
                 >
                   Research
                 </NavLink>
@@ -203,11 +219,11 @@ export default function Header() {
               Contact Us
             </NavLink>
           </nav>
-
           {/* Desktop Auth / Profile */}
+
           {user?.name ? (
             <Link to={"/profile"}>
-              <p className="text-lg uppercase flex items-center">
+              <p className="text-lg  hidden sm:flex uppercase  items-center">
                 {user.name}
                 <span className="px-2">
                   <CircleUser />
@@ -215,11 +231,12 @@ export default function Header() {
               </p>
             </Link>
           ) : (
-            <div className="hidden lg:flex items-center space-x-4 border-2 p-2  bg-blue-400 rounded-full text-sm hover:bg-blue-900">
+            <div className="hidden md:flex items-center space-x-4 border-2 p-2  bg-blue-400 rounded-full text-sm hover:bg-blue-900">
               <div
                 className="btn-primary"
                 onClick={() => {
-                  setLoginpopup(true);
+                  // setLoginpopup(true);
+                  open();
                   setLoginState("login");
                 }}
               >
@@ -236,7 +253,6 @@ export default function Header() {
               </div> */}
             </div>
           )}
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
@@ -358,7 +374,8 @@ export default function Header() {
                   ) : (
                     <button
                       onClick={() => {
-                        setLoginpopup(true);
+                        // setLoginpopup(true);
+                        toggle();
                         setLoginState("login");
                         setIsMenuOpen(false);
                       }}

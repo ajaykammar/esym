@@ -17,7 +17,7 @@ export const Data = [
     id: 1,
     title: "DNA Extraction",
     description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
+      "Biology | Genetics — DNA extraction is the process of removing DNA from cells so scientists can study genes and perform experiment",
     image:
       "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Beaker,
@@ -69,7 +69,7 @@ Would you like a visual explanation or real-world example (like forensic use or 
     id: 2,
     title: "Physics Pendulum Simulator",
     description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
+      "Physics | Mechanics — Explore pendulum motion and oscillations in this interactive simulator.",
     image:
       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Zap,
@@ -124,7 +124,7 @@ Explore the role of gravity in pendulum motion.`,
     id: 3,
     title: "Circuit Design Simulator",
     description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
+      "Electronics — Design and test electronic circuits in an interactive virtual environment.",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Circuit,
@@ -174,7 +174,7 @@ The rotating shaft can now be used to turn wheels, fans, or gears, completing th
     id: 4,
     title: "Molecular Structure Viewer",
     description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
+      "Biology | Biochemistry — Explore and visualize molecules in 3D with detailed atomic structures.",
     image:
       "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Beaker,
@@ -194,34 +194,12 @@ The rotating shaft can now be used to turn wheels, fans, or gears, completing th
     sec4t:
       "Understanding molecular geometry is critical in fields like drug design and materials science...",
   },
-  {
-    id: 5,
-    title: "Wave Motion Simulator",
-    description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
-    image:
-      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    icon: Zap,
-    banner: bg5,
-    category: "Physics",
-    module3D: null,
-    // module3D: "/3_chemistry_dangerous_-_3december2019.glb",
-    Postion: [0, 0, 0],
-    difficulty: "Intermediate",
-    sec1h: "Introduction to Wave Motion",
-    sec1t: "Understand the basics of wave motion in physics.",
-    sec2h: "Simulating Wave Motion",
-    sec2t: "Create and visualize wave patterns.",
-    sec3h: "Learning Goals",
-    sec3t: "Explore properties of waves such as frequency and amplitude.",
-    sec4h: "Theoretical Insights",
-    sec4t: "Wave motion describes the transfer of energy through a medium...",
-  },
+
   {
     id: 6,
     title: "Digital Logic Simulator",
     description:
-      "Biology | Molecular Biology | Biochemistry | Genetics | Microbiology",
+      "A tool for designing, testing, and visualizing digital circuits using logic gates, flip-flops, truth tables, and real-time signal propagation.",
     image:
       "https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Circuit,
@@ -244,13 +222,78 @@ The rotating shaft can now be used to turn wheels, fans, or gears, completing th
   },
 ];
 
-
-
+export const Physics_Data = [
+  //   {
+  //     id: 5,
+  //     title: "Wave Motion Simulator",
+  //     description: "Physics | periodic motion | vibration | and propagation",
+  //     image:
+  //       "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  //     icon: Zap,
+  //     banner: bg5,
+  //     category: "Physics",
+  //     module3D: null,
+  //     // module3D: "/3_chemistry_dangerous_-_3december2019.glb",
+  //     Postion: [0, 0, 0],
+  //     difficulty: "Intermediate",
+  //     sec1h: "Introduction to Wave Motion",
+  //     sec1t: "Understand the basics of wave motion in physics.",
+  //     sec2h: "Simulating Wave Motion",
+  //     sec2t: "Create and visualize wave patterns.",
+  //     sec3h: "Learning Goals",
+  //     sec3t: "Explore properties of waves such as frequency and amplitude.",
+  //     sec4h: "Theoretical Insights",
+  //     sec4t: "Wave motion describes the transfer of energy through a medium...",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Physics Pendulum Simulator",
+  //     description:
+  //       "hysics Pendulum Simulator visually demonstrates the oscillatory motion of a pendulum and how its movement changes with length, mass, and gravity.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  //     icon: Zap,
+  //     banner: bg2,
+  //     module3D: null,
+  //     // module3D: "/decoration.glb",
+  //     position: [0, 0, 0],
+  //     category: "Physics",
+  //     difficulty: "Advanced",
+  //     sec1h: "Understanding Pendulum Motion",
+  //     sec1t: `Pendulum motion refers to the swinging movement of an object (called the bob) that is suspended from a fixed point and allowed to move freely under the influence of gravity.
+  // When you pull the bob to one side and release it, it swings back and forth in a regular, repeating path. This is known as oscillatory or periodic motion because it repeats at regular intervals.`,
+  //     sec2h: "Pendulum Experiment Setup",
+  //     sec2t: `Step-by-step guide to setting up a pendulum simulation:
+  // 1. **Fix the support:**
+  // Attach the stand firmly to a table so it doesn’t shake.
+  // 2. **Attach the string:**
+  // Tie one end of the string to the fixed support (like a clamp or nail on a stand).
+  // 3. **Add the bob:**
+  // Tie the bob to the other end of the string. The string should be taut and the bob should hang freely without touching the ground.
+  // 4. **Measure the length:**
+  // Measure the length from the point of suspension to the center of the bob.
+  // 5. **Mark the rest position:**
+  // Let the bob hang still and mark this position as the center or equilibrium point.
+  // 6. **Displace the bob:**
+  // Pull the bob to one side (not more than 15–20°) and release it gently—don’t push it.
+  // 7. **Start the stopwatch:**
+  // As soon as you release the bob, start timing and count the number of oscillations.
+  // 8. **Record time for multiple oscillations:**
+  // Note the time for 10, 20, or 30 oscillations and calculate the average time period (T = total time / number of oscillations).`,
+  //     sec3h: "Learning Objectives",
+  //     sec3t: `Understand the relationship between pendulum length and time period.
+  // Explore the role of gravity in pendulum motion.`,
+  //     sec4h: "Theoretical Background",
+  //     sec4t: "Pendulums are often used to study harmonic motion in physics...",
+  //   },
+];
+export const Chemistry_Data = [];
 export const Biology_Data = [
   {
     id: 1,
     title: "Photosynthesis in Leaves",
-    description: "Biology | Plants | Light | Nutrition",
+    description:
+      "The biochemical process in which leaf chloroplasts convert light energy into chemical energy.",
     image:
       "https://c02.purpledshub.com/uploads/sites/41/2019/03/GettyImages-658291850-c811524.jpg?w=940&webp=1",
     // icon: Beaker,
@@ -283,56 +326,12 @@ export const Biology_Data = [
     sec4t:
       "Photosynthesis is essential for the survival of most life on Earth. It helps plants grow, produces the oxygen we breathe, and forms the foundation of the food chain.",
   },
-  // {
-  //   id: 2,
-  //   title: "Osmosis in Potatoes",
-  //   description: "Biology | Cell | Water Movement",
-  //   image: "<IMAGE_URL>",
-  //   // icon: Flask,
-  //   banner: bg2,
-  //   module3D: "/Osmosis.glb",
-  //   Postion: [0, 0, 0],
-  //   category: "Cell Biology",
-  //   difficulty: "Beginner",
-  //   sec1h: "What is Osmosis?",
-  //   sec1t:
-  //     "Osmosis is the movement of water through a cell membrane from less salty to more salty solution.",
-  //   sec2h: "Simple Experiment",
-  //   sec2t:
-  //     "Put potato pieces in plain water and salt water. See which piece becomes soft or hard.",
-  //   sec3h: "Learning Objectives",
-  //   sec3t:
-  //     "Understand how water moves in and out of cells. Learn about solutions and balance.",
-  //   sec4h: "Why It Matters",
-  //   sec4t: "Osmosis helps plants absorb water and keeps cells healthy.",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Testing Starch in Food",
-  //   description: "Biology | Nutrition | Food Science",
-  //   image: "<IMAGE_URL>",
-  //   // icon: Microscope,
-  //   banner: bg3,
-  //   module3D: "/StarchTest.glb",
-  //   Postion: [0, 0, 0],
-  //   category: "Nutrition",
-  //   difficulty: "Beginner",
-  //   sec1h: "Why Test for Starch?",
-  //   sec1t:
-  //     "Starch is a type of carbohydrate found in many foods like rice and potatoes.",
-  //   sec2h: "Simple Experiment",
-  //   sec2t:
-  //     "Put iodine on food samples. If it turns blue-black, starch is present.",
-  //   sec3h: "Learning Objectives",
-  //   sec3t:
-  //     "Learn which foods contain energy-giving starch. Practice food testing.",
-  //   sec4h: "Why It Matters",
-  //   sec4t: "Helps students understand nutrients and balanced diet.",
-  // },
+
   {
     id: 4,
     title: "Human Skeleton Model",
-    description: "Biology | Human Body | Bones",
+    description:
+      "An anatomical representation of human bones, joints, and structural support systems",
     image:
       "https://www.shutterstock.com/shutterstock/videos/3460936857/thumb/1.jpg?ip=x480",
     // icon: Beaker,
@@ -368,9 +367,11 @@ export const Biology_Data = [
   },
 
   {
-    id: 5,
+    id: 89,
     title: "Heart Rate After Exercise",
-    description: "Biology | Human Body | Circulation",
+    description:
+      "A study of how exercise affects heart rate and how the body returns to resting levels.",
+
     image:
       "https://images.stockcake.com/public/e/e/6/ee6cfba0-2263-4078-a075-3882c8f61a8e_large/anatomical-heart-illustration-stockcake.jpg",
     // icon: Microscope,
@@ -432,7 +433,8 @@ export const Biology_Data = [
   {
     id: 7,
     title: "Lung",
-    description: "Biology | Human Body | Breathing",
+    description:
+      "An anatomical overview of the lungs and their role in gas exchange within the respiratory system.",
     image:
       "https://images.theconversation.com/files/244828/original/file-20181109-116820-1oqq38v.jpg?ixlib=rb-4.1.0&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip",
     // icon: Beaker,
@@ -467,7 +469,8 @@ export const Biology_Data = [
   {
     id: 8,
     title: "Germination of Seeds",
-    description: "Biology | Plants | Growth",
+    description:
+      "The physiological process in which seeds absorb water, activate metabolism, and initiate early plant development.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpo29-MDlD7zTfWw3FalOylvF-i-KK5mmVXA&s",
     // icon: Microscope,
@@ -502,7 +505,8 @@ export const Biology_Data = [
   {
     id: 9,
     title: "Skin",
-    description: "Biology | Chemistry | pH",
+    description:
+      "The structure and function of the skin, including its protective barrier, sensory roles, and regulation of body conditions.",
     image:
       "https://askthescientists.com/wp-content/uploads/2017/08/skin-layers-1500x1250.jpg",
     // icon: Flask,
@@ -536,7 +540,8 @@ export const Biology_Data = [
   {
     id: 10,
     title: "Model of Digestive System",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "An overview of the skin as the body's protective outer layer and largest organ.Biology | Human Body | Digestion",
     image:
       "https://www.carygastro.com/uploads/_1200x720_crop_center-center_100_none/Digestive-System.jpg",
     // icon: Beaker,
@@ -606,7 +611,8 @@ export const Biology_Data = [
   {
     id: 12,
     title: "Smoker's lungs VS Non-smoker's lungs",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Biology | Human Body | Respiratory System | Comparison of Smoker's and Non-Smoker's Lungs",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_5C6Wbu5AZF20anOFtBaGNsfO5skG-fa1A&s",
     // icon: Beaker,
@@ -641,7 +647,8 @@ export const Biology_Data = [
   {
     id: 13,
     title: "The Structure of Hemoglobin",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Understanding the molecular structure of hemoglobin in the human bloodstream.",
     image:
       "https://cdn.prod.website-files.com/621e95f9ac30687a56e4297e/673fe052ac678cb4b2063b82_V2_1730456976590_18c830db-95cd-4680-965e-198d0977995b_HIGH_RES.png",
     // icon: Beaker,
@@ -679,7 +686,8 @@ export const Biology_Data = [
   {
     id: 14,
     title: "Capillary Cross Section",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "A detailed view of capillary cross-sectional anatomy and its role in nutrient and gas exchange.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4lBwvOcwrQ2yBrjF7JmhQrjLkYYu05Rv6HA&s",
     // icon: Beaker,
@@ -710,12 +718,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Capillaries play a critical role in maintaining the body’s internal environment by enabling the exchange of gases and nutrients with tissues. Understanding their structure and function helps us see how oxygen reaches our cells and how waste is removed. This knowledge is vital for learning how the circulatory system supports life and how certain health conditions can disrupt this balance.",
-
   },
   {
     id: 15,
     title: "Covid 19 Virus",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Learn about the structure and behavior of the Covid-19 virus (SARS-CoV-2) and how it infects human cells.",
     image:
       "https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1920v.jpg?sfvrsn=4dba955c_19",
     // icon: Beaker,
@@ -746,12 +754,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "COVID-19 has affected millions of lives around the world. Learning about the virus helps us understand how it spreads, how our bodies respond, and how we can protect ourselves and others. This knowledge is essential for staying safe, supporting public health, and being prepared for future outbreaks.",
-
   },
   {
     id: 16,
     title: "Shapes of bacteria",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Explore various bacterial shapes and learn how morphology helps classify bacteria",
     image:
       "https://microbeonline.com/wp-content/uploads/2021/05/Basic-morphologies-of-various-bacteria.png",
     // icon: Beaker,
@@ -782,14 +790,14 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Recognizing the shapes of bacteria helps scientists and doctors identify the type of bacteria causing an infection. This knowledge is important for choosing the right treatment and understanding how bacteria behave. Learning about bacterial shapes also helps students appreciate the diversity and roles of microorganisms in health, disease, and the environment.",
-
   },
   {
     id: 17,
     title: "Differences Between Archaea and Bacteria",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Learn how archaea differ from bacteria in structure, evolution, and biochemical processes.",
     image:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS76C7ArvjjcN2qUctqkBzVU6Tb0RmOY6x53Q&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS76C7ArvjjcN2qUctqkBzVU6Tb0RmOY6x53Q&s",
     // icon: Beaker,
     banner: bg6,
     EmbelLink:
@@ -818,12 +826,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Knowing the difference between archaea and bacteria helps us better understand the diversity of life on Earth. Archaea provide insights into evolution and how life can survive in extreme conditions. Bacteria impact our health, environment, and industry. Learning about both helps in scientific research, medicine, and understanding Earth’s earliest life forms.",
-
   },
   {
     id: 18,
     title: "Bacteria and fungal yeast",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Explore the differences between bacteria and fungal yeast, including how they grow, reproduce, and impact humans",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIwE1DCMV-BC5mgKj5TErQrMJNjQRkAZRs1Sib6WdjRS688cnq2xMCCiq7OD2LxpdQaY&usqp=CAU",
     // icon: Beaker,
@@ -854,12 +862,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Bacteria and yeast are important to human life. While some cause illness, many are essential in making food, aiding digestion, and even creating medicines. Understanding their differences helps us use them safely and effectively in health, science, and industry. It also teaches us how diverse and fascinating microscopic life can be.",
-
   },
   {
     id: 19,
     title: "Good and bad bacterial flora",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Learn about the good and bad bacterial flora in the human body and how they affect immunity, digestion, and overall health.",
     image:
       "https://www.shutterstock.com/image-vector/good-bacteria-bad-enteric-intestinal-600w-380527045.jpg",
     // icon: Beaker,
@@ -890,12 +898,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Good bacteria support digestion, immunity, and overall health, while harmful bacteria can cause infections and diseases. Understanding the difference helps us make healthy choices, use antibiotics responsibly, and appreciate the role of microbes in keeping our bodies functioning properly.",
-
   },
   {
     id: 20,
     title: "Complete Human Head Anatomy",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Explore the full anatomy of the human head—skull, brain, eyes, ears, nose, mouth, and major nerves.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhciX8EcHVVX228I2Ag4D1pIEGDDHC7nGqeg&s",
     // icon: Beaker,
@@ -926,12 +934,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "The human head contains critical organs that control thought, sensation, and basic survival functions. Understanding its anatomy helps us know how we think, see, hear, speak, and stay alive. It also supports medical knowledge, safety awareness, and appreciation of how the body works in harmony.",
-
   },
   {
     id: 21,
     title: "Complete Human Anatomy",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Explore the complete anatomy of the human body, including skeletal, muscular, circulatory, nervous, and digestive systems",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3l9coELEDiEwkaezvAwMbvYSThP6PCZfvlw&s",
     // icon: Beaker,
@@ -962,12 +970,12 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "Understanding complete human anatomy gives us a deeper appreciation of how our bodies function. It helps us make informed health decisions, understand medical care, and recognize signs when something is wrong. Studying anatomy is essential for careers in medicine, sports, biology, and everyday life awareness of personal health and well-being.",
-
   },
   {
     id: 22,
     title: "Neurves system",
-    description: "Biology | Human Body | Digestion",
+    description:
+      " Learn about the human nervous system, how the brain, spinal cord, and nerves control body functions.  ",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ8NlvumUT-cg9Hgptc6hPF_iCT6J8kiE43g&s",
     // icon: Beaker,
@@ -998,5 +1006,5 @@ export const Biology_Data = [
     sec4h: "Why It Matters",
     sec4t:
       "The nervous system controls everything from breathing and heartbeat to thinking and feeling. It helps us interact with the world and keeps our body working properly. Learning about the nervous system helps us understand brain function, how we react to danger, how injuries affect movement, and why protecting the brain and spine is important for health and safety.",
-  }
+  },
 ];

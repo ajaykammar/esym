@@ -89,21 +89,21 @@ export function ResearchersList() {
         </div>
 
         {/* Results */}
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <p className="text-gray-600">
             Showing {filteredResearchers.length} researcher
             {filteredResearchers.length !== 1 ? "s" : ""}
             {selectedDepartment && ` in ${selectedDepartment}`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>
-        </div>
+        </div> */}
 
         {/* Researchers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredResearchers.map((researcher) => (
             <ResearcherCard key={researcher.id} researcher={researcher} />
           ))}
-        </div>
+        </div> */}
 
         {filteredResearchers.length === 0 && (
           <div className="text-center py-16">

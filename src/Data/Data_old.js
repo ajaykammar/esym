@@ -74,7 +74,6 @@ Would you like a visual explanation or real-world example (like forensic use or 
       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Zap,
     banner: bg2,
-
     module3D: null,
     // module3D: "/decoration.glb",
     position: [0, 0, 0],

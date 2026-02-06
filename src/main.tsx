@@ -12,10 +12,13 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <GoogleOAuthProvider clientId="67263510917-82k5nv1l76mlp18jlrle1esipeb2i1ti.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId="1063862703184-cenlfhoq5oehjml9e20udsg18lb3eo03.apps.googleusercontent.com">
           <App />
         </GoogleOAuthProvider>
-        <ToastContainer />
+        <ToastContainer
+          position="bottom-right" // 👈 This places the toast at the bottom right
+          autoClose={3000} // Auto close after 3 seconds
+        />
       </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>

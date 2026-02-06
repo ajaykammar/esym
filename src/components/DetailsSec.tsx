@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DetailsSec = () => {
   return (
@@ -16,16 +17,21 @@ const DetailsSec = () => {
 
           {/* Right Section - Details */}
           <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Section Title</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+              3D Vartual Labs
+            </h2>
             <p className="text-gray-600 mb-4">
-              This is the details section. You can add any content here, such as descriptions,
-              features, or any other information you want to display. Tailwind CSS makes styling
-              easy and efficient.
+              Experience interactive science and engineering experiments in a
+              realistic 3D environment. Our 3D Virtual Labs allow learners to
+              explore, simulate, and understand complex concepts safely and
+              efficiently—anytime, anywhere. Designed for education, training,
+              and innovation, these labs bring hands-on learning to the digital
+              world.
             </p>
             <div className="flex justify-center gap-4">
               <button className="relative flex justify-center items-center rounded-2xl bg-black font-montserrat shadow-md hover:shadow-lg cursor-pointer overflow-hidden border-none group">
                 <span className="text-center w-full px-5 py-3 text-white text-lg  tracking-widest z-20 transition-all duration-300 ease-in-out group-hover:text-[#183153]">
-                  Start
+                  <Link to={"/virtuallabs"}>Start</Link>
                 </span>
                 <div className="absolute top-0 right-0 h-full w-0 bg-[#ffd402] transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></div>
               </button>
