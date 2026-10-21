@@ -30,6 +30,9 @@ import Reports from "./Tabcom/Report/Reports";
 import HowToPlay from "./Tabcom/HowtoPlay/HowToPlay";
 import GameControls from "./Tabcom/Action/GameControls";
 import TabletGameUI from "./Tabcom/Experiment/TabletGameUI";
+import BlogList from "./Pages/BlogList";
+import BlogDetail from "./Pages/BlogDetail";
+import NotFound from "./Pages/NotFound";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -109,11 +112,17 @@ const App = () => {
             <Route path="/chemistry" element={<Chemistry />} />
             <Route path="/biology" element={<Biology />} />
             {/* <Route path="/test" element={<UnityViewer />} /> */}
-            <Route path="/research" element={<ResearchersList />} />
-            <Route path="/researcher/:id" element={<ResearcherDetail />} />
+            {/* <Route path="/research" element={<ResearchersList />} /> */}
+            {/* <Route path="/researcher/:id" element={<ResearcherDetail />} /> */}
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
 
             <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<UserProfile />} />
+              <Route
+                path="/simulation/:mainCategry/:topic"
+                element={<TopicComponent />}
+              />
               <Route
                 path="/simulation/:mainCategry/:topic/:id"
                 element={<TopicComponent />}
@@ -121,7 +130,7 @@ const App = () => {
               <Route path="/simulation/:id" element={<SimComponent />} />
             </Route>
           </Route>
-
+{/* 
           <Route path="/tab/" element={<TabMainLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="simulations" element={<Simulations />} />
@@ -129,7 +138,9 @@ const App = () => {
             <Route path="howtoplay" element={<HowToPlay />} />
             <Route path="action" element={<GameControls />} />
             <Route path="game" element={<TabletGameUI />} />
-          </Route>
+          </Route> */}
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <Footer /> */}
       </div>

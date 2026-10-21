@@ -9,19 +9,38 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import { Data, Biology_Data } from "../Data/Data_old"; // Import your data file
-import { Physics_Data, Chemistry_Data, Biology_Data } from "../Data/Data";
+import { Helmet } from "react-helmet-async";
+import { Data, Physics_Data, Chemistry_Data, Biology_Data } from "../Data/Data";
+import { formatExperimentTitle, normalizeTopicSlug } from "../utils/formatExperiment";
 
 import DNAViewer from "./3d/DNAViewer";
 
 const TopicComponent = () => {
-  const { id } = useParams(); // Access the 'id' parameter from the URL
+  const { mainCategry, topic, id } = useParams();
 
-  const matchedData = [
+  const allSimulations = [
+    ...Data,
     ...Physics_Data,
     ...Chemistry_Data,
     ...Biology_Data,
-  ].find((item) => item.id === parseInt(id)); // Find the data matching the ID
+  ];
+
+  const matchedData = allSimulations.find((item) => {
+    if (topic) {
+      if (
+        formatExperimentTitle(item.title).toLowerCase() === topic.toLowerCase()
+      ) {
+        return true;
+      }
+      if (normalizeTopicSlug(item.title) === normalizeTopicSlug(topic)) {
+        return true;
+      }
+    }
+    if (id) {
+      return item.id === parseInt(id);
+    }
+    return false;
+  });
 
   // Animation References
   useEffect(() => {
@@ -37,64 +56,139 @@ const TopicComponent = () => {
 
   if (!matchedData) {
     return (
-      <div className="text-center text-xl text-gray-500">
-        No data found for the specified ID.
+      <div className="text-center text-xl text-gray-500 py-20">
+        No data found for the specified simulation.
       </div>
     );
   }
 
+  const resolvedCategory =
+    mainCategry ||
+    (matchedData?.category ? matchedData.category.toLowerCase().replace(/\s+/g, "-") : "biology");
+  const simulationSlug = formatExperimentTitle(matchedData.title);
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Banner */}
-
+      <Helmet>
+        <title>{`${matchedData.title} – 3D Virtual Simulation | MantrixLab`}</title>
+        <meta
+          name="description"
+          content={matchedData.description}
+        />
+        <link
+          rel="canonical"
+          href={`https://mantrixlab.com/simulation/${resolvedCategory}/${simulationSlug}/`}
+        />
+        <meta
+          property="og:title"
+          content={`${matchedData.title} – 3D Virtual Simulation | MantrixLab`}
+        />
+        <meta
+          property="og:description"
+          content={matchedData.description}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://mantrixlab.com/simulation/${resolvedCategory}/${simulationSlug}/`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`${matchedData.title} – 3D Virtual Simulation | MantrixLab`}
+        />
+        <meta
+          name="twitter:description"
+          content={matchedData.description}
+        />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": "${matchedData.title}",
+              "description": "${matchedData.description}",
+              "url": "https://mantrixlab.com/simulation/${resolvedCategory}/${simulationSlug}/",
+              "educationalLevel": "${matchedData.difficulty || "Beginner"}",
+              "genre": "${matchedData.category || "Science"}",
+              "provider": {
+                "@type": "Organization",
+                "name": "MantrixLab",
+                "url": "https://mantrixlab.com",
+                "logo": "https://mantrixlab.com/logo.png"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      {/* Hero Banner *      {/* Hero Banner */}
       <div
-        className="text-white  bg-cover bg-center bg-no-repeat"
+        className="relative w-full overflow-hidden bg-black min-h-[220px] sm:min-h-[280px] md:min-h-[380px] flex items-center"
         key={matchedData.id}
-        style={{
-          backgroundImage: `url(${matchedData.banner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "100vh", // or any specific height like '500px'
-        }}
-      ></div>
-      <h1 className="text-4xl text-center w-full my-3 mt-6 md:text-5xl font-bold leading-tight">
-        {matchedData.title}
-      </h1>
-      <div className="sketchfab-embed-wrapper ">
-        <div className="flex w-full items-center justify-center pt-4 rounded-lg overflow-hidden ">
-          <iframe
-            title="skeleton"
-            frameBorder="0"
-            allowFullScreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking="true"
-            execution-while-out-of-viewport="true"
-            execution-while-not-rendered="true"
-            web-share="true"
-            src={matchedData?.EmbelLink}
-            style={{
-              width: "80%",
-              height: "480px",
-              boxShadow: "0px 0px 10px black ",
-              borderRadius: "10px",
-            }}
-          ></iframe>
-        </div>
+      >
+        <img
+          src={matchedData.banner}
+          alt={matchedData.title}
+          className="w-full h-full min-h-[220px] sm:min-h-[280px] md:min-h-[380px] object-cover sm:object-fill"
+        />
 
-        {/* {console.log(matchedData.banner)} */}
-        <div className="container mx-auto px-6 py-16 flex justify-end">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                {matchedData.title}
-              </h1>
-              <p className="text-xl text-blue-100">{matchedData.description}</p>
-              <button className="relative flex justify-center items-center rounded-2xl bg-black font-montserrat shadow-md hover:shadow-lg cursor-pointer overflow-hidden border border-blue-700 group">
-                <span className="text-center flex items-center w-full px-5 py-3 text-white text-lg tracking-widest z-20 transition-all duration-300 ease-in-out group-hover:text-[#183153]">
+        {/* Text Layer - Responsive Overlay */}
+        <div className="absolute inset-y-0 left-0 flex flex-col justify-center p-4 sm:p-6 md:p-8 w-[92%] sm:w-[75%] md:w-[60%] lg:w-[48%]">
+          <h1
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 md:mb-4 flex flex-wrap leading-tight"
+            style={{ fontFamily: "Nunito" }}
+          >
+            {matchedData.title.split(" ").map((word: string, i: number) => (
+              <span
+                key={i}
+                className="inline-block whitespace-nowrap mr-2 sm:mr-3 text-black"
+              >
+                {word}
+              </span>
+            ))}
+          </h1>
+
+          <p className="block text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-black/85 leading-snug line-clamp-3 sm:line-clamp-4 md:line-clamp-none break-words">
+            {matchedData.description}
+          </p>
+        </div>
+      </div>
+
+      {/* 3D Model / Embed Section */}
+      {matchedData?.EmbelLink && (
+        <div className="sketchfab-embed-wrapper w-full px-4 sm:px-6 py-6 flex justify-center">
+          <div className="w-full max-w-5xl rounded-xl overflow-hidden shadow-2xl bg-black">
+            <iframe
+              title={matchedData.title}
+              frameBorder="0"
+              allowFullScreen
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              xr-spatial-tracking="true"
+              execution-while-out-of-viewport="true"
+              execution-while-not-rendered="true"
+              web-share="true"
+              src={matchedData?.EmbelLink}
+              className="w-full h-[260px] sm:h-[380px] md:h-[480px]"
+            ></iframe>
+          </div>
+        </div>
+      )}
+
+      {/* Experiment Intro Section */}
+      <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-100">
+          <div className="max-w-3xl space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-gray-900 break-words">
+              {matchedData.title}
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed break-words">
+              {matchedData.description}
+            </p>
+            <div>
+              <button className="relative inline-flex justify-center items-center rounded-2xl bg-black font-montserrat shadow-md hover:shadow-lg cursor-pointer overflow-hidden border border-blue-700 group">
+                <span className="text-center flex items-center px-5 py-3 text-white text-sm sm:text-base tracking-wider z-20 transition-all duration-300 ease-in-out group-hover:text-[#183153] gap-2">
                   <Microscope className="h-5 w-5" />
                   Start Experiment
                 </span>
@@ -104,103 +198,111 @@ const TopicComponent = () => {
           </div>
         </div>
       </div>
+
       {/* Info Section */}
-      <div className="container mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
-            data-aos="zoom-out-right"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <Beaker className="h-6 w-6 text-blue-600" />
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {matchedData?.sec1h && (
+            <div
+              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 flex flex-col justify-between"
+              data-aos="zoom-out-right"
+            >
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <div className="p-3 bg-blue-100 rounded-lg shrink-0">
+                    <Beaker className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-800 break-words">
+                    {matchedData.sec1h}
+                  </h2>
+                </div>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line break-words">
+                  {matchedData.sec1t}
+                </p>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">
-                {matchedData.sec1h}
-              </h2>
             </div>
-            <p className="text-gray-600">{matchedData.sec1t}</p>
-          </div>
+          )}
+
           {matchedData?.module3D && (
             <DNAViewer
               modelPath={matchedData?.module3D}
-              labelPosition={matchedData.Postion} // Optional custom label position
+              labelPosition={matchedData.Postion}
             />
           )}
-          <div
-            className="bg-white rounded-xl p-6 border border-gray-100"
-            data-aos="zoom-out-left"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-indigo-100 rounded-lg">
-                <Flask className="h-6 w-6 text-indigo-600" />
+
+          {matchedData?.sec2h && (
+            <div
+              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 flex flex-col justify-between"
+              data-aos="zoom-out-left"
+            >
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <div className="p-3 bg-indigo-100 rounded-lg shrink-0">
+                    <Flask className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-800 break-words">
+                    {matchedData.sec2h}
+                  </h2>
+                </div>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line break-words">
+                  {matchedData.sec2t}
+                </p>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">
-                {matchedData.sec2h}
-              </h2>
             </div>
-            <p className="text-gray-600">{matchedData.sec2t}</p>
-          </div>
+          )}
         </div>
       </div>
+
       {/* Learning Objectives */}
-      <div
-        className="bg-gradient-to-r from-gray-50 to-blue-50 py-12"
-        data-aos="zoom-out"
-      >
-        <div className="container mx-auto px-6">
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-green-100 rounded-lg">
-                <BookOpen className="h-6 w-6 text-green-600" />
+      {matchedData?.sec3h && (
+        <div
+          className="bg-gradient-to-r from-gray-50 to-blue-50 py-8 sm:py-12"
+          data-aos="zoom-out"
+        >
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 border border-gray-100">
+              <div className="flex items-center gap-3 sm:gap-4 mb-6">
+                <div className="p-3 bg-green-100 rounded-lg shrink-0">
+                  <BookOpen className="h-6 w-6 text-green-600" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-800 break-words">
+                  {matchedData.sec3h}
+                </h2>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">
-                {matchedData.sec3h}
-              </h2>
-            </div>
-            {/* <ul className="space-y-3 text-gray-600">
-                            {matchedData.sec3t.map((sec3t, index) => (
-                                <li key={index} className="flex items-start gap-2">
-                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2.5"></div>
-                                    {sec3t}
-                                </li>
-                            ))}
-                        </ul> */}
-            <p>
-              {matchedData?.sec3t?.map((item: any) => (
-                <li>{item}</li>
-              ))}
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Theoretical Background */}
-      <div className="container mx-auto px-6 py-12" data-aos="zoom-out">
-        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            {matchedData.sec4t}
-          </h2>
-          <div className="space-y-6 text-gray-600">
-            {/* {matchedData.theoreticalBackground.map((text, index) => (
-                            <p key={index}>{text}</p>
-                        ))} */}
-            <div className="bg-blue-50 p-6 rounded-lg mt-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Stages of DNA Isolation:
-              </h3>
-              {/* <ul className="space-y-3">
-                                {matchedData.stages.map((stage, index) => (
-                                    <li key={index} className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2.5"></div>
-                                        <span>{stage}</span>
-                                    </li>
-                                ))}
-                            </ul> */}
-              <p>{matchedData.sec4t}</p>
+              {Array.isArray(matchedData?.sec3t) ? (
+                <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {matchedData.sec3t.map((item: any, index: number) => (
+                    <li key={index} className="break-words">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line break-words">
+                  {matchedData?.sec3t}
+                </p>
+              )}
             </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* Theoretical Background / Principles */}
+      {matchedData?.sec4t && (
+        <div
+          className="container mx-auto px-4 sm:px-6 py-8 sm:py-12"
+          data-aos="zoom-out"
+        >
+          <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 border border-gray-100">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 break-words">
+              {matchedData.sec4h || "Theoretical Background"}
+            </h2>
+            <div className="bg-blue-50 p-4 sm:p-6 rounded-lg text-gray-700 text-sm sm:text-base leading-relaxed whitespace-pre-line break-words">
+              {matchedData.sec4t}
+            </div>
+          </div>
+        </div>
+      )}
       {/* Simulation Container */}
       {/* <LabSimulation /> */}
     </div>

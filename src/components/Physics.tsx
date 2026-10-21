@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import useToggleStore from "../features/useToggleStore";
 import { Helmet } from "react-helmet-async";
 
+import { formatExperimentTitle } from "../utils/formatExperiment";
+
 // Define the type for each simulation item
 interface SimulationItem {
   id: string | number;
@@ -24,7 +26,8 @@ const Physics: React.FC = () => {
   const Navigate = useNavigate();
   const UserNavigete = (simulation: any) => {
     if (Object.keys(JSON.parse(user)).length > 0) {
-      Navigate(`/simulation/${simulation.id}`);
+      const experiment = formatExperimentTitle(simulation.title);
+      Navigate(`/simulation/physics/${experiment}/`);
     } else {
       open();
       notify("Please log in to access the simulations.");
@@ -80,9 +83,7 @@ const Physics: React.FC = () => {
               "@type": "Course",
               "name": "${item.title}",
               "description": "${item.description}",
-              "url": "https://mantrixlab.com/simulation/physics/${item.title
-                .split(" ")
-                .join("-")}/${item.id}",
+              "url": "https://mantrixlab.com/simulation/physics/${formatExperimentTitle(item.title)}/",
               "educationalLevel": "${item.difficulty}",
               "genre": "${item.category}"
             }`;

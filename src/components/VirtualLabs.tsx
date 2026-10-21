@@ -24,8 +24,7 @@ const VirtualLabs = () => {
   const UserNavigate = (simulation: any, category: string) => {
     if (Object.keys(JSON.parse(user)).length > 0) {
       const experiment = formatExperiment(simulation.title);
-      const id = simulation.id;
-      Navigate(`/simulation/${category}/${experiment}/${id}`);
+      Navigate(`/simulation/${category}/${experiment}/`);
     } else {
       open();
       notify("Please log in to access the simulations.");
@@ -37,11 +36,14 @@ const VirtualLabs = () => {
     title: string,
     data: any[],
     categry: string
-  ) => (
-    <section className="mb-20">
-      <h2 className="text-4xl font-bold text-center mb-10 text-gray-800">
-        {title}
-      </h2>
+  ) => {
+    if (!data || data.length === 0) return null;
+
+    return (
+      <section className="mb-20">
+        <h2 className="text-4xl font-bold text-center mb-10 text-gray-800">
+          {title}
+        </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.map((simulation: any) => {
@@ -106,6 +108,7 @@ const VirtualLabs = () => {
       </div>
     </section>
   );
+};
 
   return (
     <>

@@ -23,6 +23,18 @@ const Home = () => {
   return (
     <div>
       <Helmet>
+        <title>MantrixLab – 3D Virtual Labs & Interactive Science Simulations</title>
+        <meta
+          name="description"
+          content="MantrixLab offers interactive 3D virtual labs and science simulations for schools, colleges, and medical students. Explore Physics, Chemistry, and Biology simulations."
+        />
+        <link rel="canonical" href="https://mantrixlab.com/" />
+        <meta property="og:title" content="MantrixLab – 3D Virtual Labs" />
+        <meta
+          property="og:description"
+          content="Explore science with 3D simulations and virtual labs for school, college, and medical students."
+        />
+        <meta property="og:url" content="https://mantrixlab.com/" />
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>

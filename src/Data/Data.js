@@ -69,56 +69,42 @@ Would you like a visual explanation or real-world example (like forensic use or 
     id: 2,
     title: "Physics Pendulum Simulator",
     description:
-      "Physics | Mechanics — Explore pendulum motion and oscillations in this interactive simulator.",
+      "Physics | Mechanics — Using a Simple Pendulum plot L-T and L-T² graphs, hence find the effective length of second's pendulum.",
     image:
       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     icon: Zap,
     banner: bg2,
 
     module3D: null,
-    // module3D: "/decoration.glb",
     position: [0, 0, 0],
     category: "Physics",
     difficulty: "Advanced",
 
-    sec1h: "Understanding Pendulum Motion",
-    sec1t: `Pendulum motion refers to the swinging movement of an object (called the bob) that is suspended from a fixed point and allowed to move freely under the influence of gravity.
+    sec1h: "Aim & Apparatus",
+    sec1t: `AIM: Using a Simple Pendulum plot L – T and L – T² graphs, hence find the effective length of second's pendulum using appropriate graph.
 
-When you pull the bob to one side and release it, it swings back and forth in a regular, repeating path. This is known as oscillatory or periodic motion because it repeats at regular intervals.`,
+APPARATUS AND MATERIAL REQUIRED: Clamp stand; a split cork; a heavy metallic (brass/iron) spherical bob with a hook; a long, fine, strong cotton thread/string (about 2.0 m); stop-watch; metre scale, graph paper.`,
 
-    sec2h: "Pendulum Experiment Setup",
-    sec2t: `Step-by-step guide to setting up a pendulum simulation:
+    sec2h: "Pendulum Experiment Procedure",
+    sec2t: `1. Place the clamp stand on the table. Tie the hook, attached to the pendulum bob, to one end of the string of about 150 cm in length. Pass the other end of the string through two half-pieces of a split cork.
+2. Clamp the split cork firmly in the clamp stand such that the line of separation of the two pieces of the split cork is at right angles to the line along which the pendulum oscillates.
+3. Measure the effective length of simple pendulum (length of string + radius of bob + hook).
+4. Displace the bob to one side, not more than 15 degrees angular displacement, and release it gently. Ensure it oscillates in a vertical plane without spinning or moving in an elliptic path.
+5. Keep the pendulum oscillating for some time. Start the stop-watch as the bob just crosses its mean position (say, from left to right) and count it as zero.
+6. Count oscillations every time the bob crosses the mean position in the same direction. Stop the watch at count n (e.g., 20 or 25 oscillations). Compute the time for one oscillation (T = t/n).
+7. Change the length of the pendulum by about 10 cm and repeat step 6. Take 5 or 6 observations for different lengths.`,
 
-1. **Fix the support:**  
-Attach the stand firmly to a table so it doesn’t shake.
+    sec3h: "Learning Objectives & Observations",
+    sec3t: `Plot a graph between L versus T and L versus T² using the observed values. 
+Observe that the L-T graph is a curve (part of a parabola) while the L-T² graph is a straight line passing through the origin. 
+Locate the effective length of a second's pendulum from the graph where T² = 4s².`,
 
-2. **Attach the string:**  
-Tie one end of the string to the fixed support (like a clamp or nail on a stand).
+    sec4h: "Theoretical Background (Principle)",
+    sec4t: `The simple pendulum executes Simple Harmonic Motion (SHM) as the acceleration of the pendulum bob is directly proportional to its displacement from the mean position and is always directed towards it.
 
-3. **Add the bob:**  
-Tie the bob to the other end of the string. The string should be taut and the bob should hang freely without touching the ground.
-
-4. **Measure the length:**  
-Measure the length from the point of suspension to the center of the bob.
-
-5. **Mark the rest position:**  
-Let the bob hang still and mark this position as the center or equilibrium point.
-
-6. **Displace the bob:**  
-Pull the bob to one side (not more than 15–20°) and release it gently—don’t push it.
-
-7. **Start the stopwatch:**  
-As soon as you release the bob, start timing and count the number of oscillations.
-
-8. **Record time for multiple oscillations:**  
-Note the time for 10, 20, or 30 oscillations and calculate the average time period (T = total time / number of oscillations).`,
-
-    sec3h: "Learning Objectives",
-    sec3t: `Understand the relationship between pendulum length and time period.
-Explore the role of gravity in pendulum motion.`,
-
-    sec4h: "Theoretical Background",
-    sec4t: "Pendulums are often used to study harmonic motion in physics...",
+The time period (T) of a simple pendulum for oscillations of small amplitude is given by the relation:
+T = 2π√(L/g)
+Where L is the effective length of the pendulum, and g is the acceleration due to gravity at the place of the experiment.`,
   },
   {
     id: 3,
@@ -541,7 +527,7 @@ export const Biology_Data = [
     id: 10,
     title: "Model of Digestive System",
     description:
-      "An overview of the skin as the body's protective outer layer and largest organ.Biology | Human Body | Digestion",
+      "Biology | Human Body | Digestion — Explore an interactive 3D model of the human digestive system, tracing food breakdown, nutrient absorption, and organ functions.",
     image:
       "https://www.carygastro.com/uploads/_1200x720_crop_center-center_100_none/Digestive-System.jpg",
     // icon: Beaker,
@@ -576,7 +562,8 @@ export const Biology_Data = [
   {
     id: 11,
     title: "Human Kidney Anatomy Cross Section",
-    description: "Biology | Human Body | Digestion",
+    description:
+      "Biology | Human Body | Excretory System — Explore the cross-sectional anatomy of the human kidney, nephron filtration, and urine formation in 3D.",
     image:
       "https://png.pngtree.com/png-clipart/20220730/original/pngtree-human-kidney-cross-section-illustration-sees-veins-and-arteries-used-in-png-image_8444800.png",
     // icon: Beaker,
@@ -975,7 +962,7 @@ export const Biology_Data = [
     id: 22,
     title: "Neurves system",
     description:
-      " Learn about the human nervous system, how the brain, spinal cord, and nerves control body functions.  ",
+      "Biology | Human Body | Nervous System — Learn about the human nervous system, how the brain, spinal cord, and nerves control body functions.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ8NlvumUT-cg9Hgptc6hPF_iCT6J8kiE43g&s",
     // icon: Beaker,

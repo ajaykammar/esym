@@ -133,10 +133,10 @@ const Slide = ({ slide, active }) => {
       />
 
       {/* Text Layer */}
-      <div className="absolute top-[20%] left-0 h-full pt-10 p-6 w-[40%]">
+      <div className="absolute top-[15%] md:top-[20%] left-0 h-full pt-10 p-6 w-[90%] sm:w-[70%] md:w-[60%] lg:w-[45%] xl:w-[40%]">
         <h2
           ref={titleRef}
-          className="md:text-8xl font-bold mb-4 flex flex-wrap"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 flex flex-wrap"
           style={{ fontFamily: "Nunito" }}
         >
           {slide.title.split("").map((char, i) => (
@@ -146,7 +146,7 @@ const Slide = ({ slide, active }) => {
           ))}
         </h2>
 
-        <p ref={captionRef} className="text-xs  md:text-3xl font-semibold">
+        <p ref={captionRef} className="text-sm sm:text-base md:text-2xl lg:text-3xl font-semibold">
           {slide.caption}
         </p>
       </div>

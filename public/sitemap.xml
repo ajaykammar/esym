@@ -1,69 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
-  <!-- Public Routes -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Public Main Routes -->
   <url>
-    <loc>
-    
-    https://mantrixlab.com/</loc>
+    <loc>https://mantrixlab.com/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/virtuallabs</loc>
+    <loc>https://mantrixlab.com/virtuallabs</loc>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/about</loc>
+    <loc>https://mantrixlab.com/physics</loc>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/contact</loc>
+    <loc>https://mantrixlab.com/chemistry</loc>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/physics</loc>
+    <loc>https://mantrixlab.com/biology</loc>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/chemistry</loc>
+    <loc>https://mantrixlab.com/about</loc>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/biology</loc>
+    <loc>https://mantrixlab.com/contact</loc>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/research</loc>
+    <loc>https://mantrixlab.com/blog</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/blog/virtual-simulations-transforming-science-education</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/blog/bridging-the-gap-3d-visualization</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/blog/photosynthesis-process-3d-simulation</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/profile</loc>
+    <priority>0.50</priority>
   </url>
 
-  <!-- Dynamic Routes -->
+  <!-- Physics & Chemistry Simulations -->
   <url>
-    <loc>
-    
-    https://mantrixlab.com/researcher/[id]</loc>
+    <loc>https://mantrixlab.com/simulation/chemistry/DNA-Extraction/</loc>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/profile</loc>
+    <loc>https://mantrixlab.com/simulation/physics/Physics-Pendulum-Simulator/</loc>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/simulation/[mainCategry]/[topic]/[id]</loc>
+    <loc>https://mantrixlab.com/simulation/physics/Circuit-Design-Simulator/</loc>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>
-    
-    https://mantrixlab.com/simulation/[id]</loc>
+    <loc>https://mantrixlab.com/simulation/chemistry/Molecular-Structure-Viewer/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/physics/Digital-Logic-Simulator/</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Biology Simulations -->
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Photosynthesis-in-Leaves/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Human-Skeleton-Model/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Heart-Rate-After-Exercise/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Lung/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Germination-of-Seeds/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Skin/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Model-of-Digestive-System/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Human-Kidney-Anatomy-Cross-Section/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Smokers-lungs-VS-Nonsmokers-lungs/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/The-Structure-of-Hemoglobin/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Capillary-Cross-Section/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Covid-19-Virus/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Shapes-of-bacteria/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Differences-Between-Archaea-and-Bacteria/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Bacteria-and-fungal-yeast/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Good-and-bad-bacterial-flora/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Complete-Human-Head-Anatomy/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Complete-Human-Anatomy/</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mantrixlab.com/simulation/biology/Neurves-system/</loc>
+    <priority>0.85</priority>
   </url>
 </urlset>

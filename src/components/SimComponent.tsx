@@ -9,6 +9,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Helmet } from "react-helmet-async";
 import { Data } from "../Data/Data_old"; // Import your data file
 import DNAViewer from "./3d/DNAViewer";
 
@@ -34,14 +35,23 @@ const SimComponent = () => {
 
   if (!matchedData) {
     return (
-      <div className="text-center text-xl text-gray-500">
-        No data found for the specified ID.
+      <div className="text-center text-xl text-gray-500 py-20">
+        No data found for the specified simulation ID.
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{`${matchedData.title} – 3D Virtual Simulation | MantrixLab`}</title>
+        <meta name="description" content={matchedData.description} />
+        <meta
+          property="og:title"
+          content={`${matchedData.title} – 3D Virtual Simulation | MantrixLab`}
+        />
+        <meta property="og:description" content={matchedData.description} />
+      </Helmet>
       {/* Hero Banner */}
       <div
         className="text-white  bg-cover bg-center bg-no-repeat"

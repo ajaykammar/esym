@@ -171,7 +171,7 @@ export default function Header() {
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <NavLink to={""} className="nav-link">
+            <NavLink to={"/"} className="nav-link">
               Home
             </NavLink>
             <NavLink to={"/virtuallabs"} className="nav-link">
@@ -179,36 +179,21 @@ export default function Header() {
             </NavLink>
 
             {/* Resources dropdown */}
-            <div className="relative group">
-              <button className="flex items-center  nav-link">
-                <span className="text-white ">Resources</span>
-                <ChevronDown className="h-4 w-4" />
+            <div className="relative group flex items-center">
+              <button className="nav-link !m-0 !mt-0 flex items-center gap-1 cursor-pointer text-white">
+                <span>Resources</span>
+                <ChevronDown className="h-4 w-4 text-white group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white text-black rounded-lg shadow-lg py-2 w-44">
-                <NavLink
-                  to="/blog"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to="/case-studies"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Case Studies
-                </NavLink>
-                <NavLink
-                  to="/webinars"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Webinars
-                </NavLink>
-                <NavLink
-                  to="/research"
-                  className="block px-4 py-2 hover:bg-gray-100 text-whi"
-                >
-                  Research
-                </NavLink>
+
+              <div className="absolute left-0 top-full pt-1 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 z-50">
+                <div className="bg-white text-black rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] py-2 w-60 border border-gray-100 overflow-hidden ring-1 ring-black ring-opacity-5">
+                  <NavLink
+                    to="/blog"
+                    className="flex items-center px-5 py-3 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold"
+                  >
+                    Blog
+                  </NavLink>
+                </div>
               </div>
             </div>
 
@@ -285,7 +270,7 @@ export default function Header() {
 
               <div className="flex flex-col space-y-6 text-lg">
                 <NavLink
-                  to={""}
+                  to={"/"}
                   onClick={() => setIsMenuOpen(false)}
                   className="mobile-link"
                 >
@@ -320,27 +305,6 @@ export default function Header() {
                         className="mobile-dropdown-link"
                       >
                         Blog
-                      </NavLink>
-                      <NavLink
-                        to="/case-studies"
-                        onClick={() => setIsMenuOpen(false)}
-                        className="mobile-dropdown-link"
-                      >
-                        Case Studies
-                      </NavLink>
-                      <NavLink
-                        to="/webinars"
-                        onClick={() => setIsMenuOpen(false)}
-                        className="mobile-dropdown-link"
-                      >
-                        Webinars
-                      </NavLink>
-                      <NavLink
-                        to="/research"
-                        onClick={() => setIsMenuOpen(false)}
-                        className="mobile-dropdown-link"
-                      >
-                        Research
                       </NavLink>
                     </div>
                   )}

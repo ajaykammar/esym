@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import { Profile } from "../services/Auth";
 import avtar from "../Images/avtar.jpg";
+import { Helmet } from "react-helmet-async";
 const UserProfile: React.FC = () => {
   const [activeTab, setActiveTab] = useState("personal");
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -47,6 +48,14 @@ const UserProfile: React.FC = () => {
 
   return (
     <div className="dashboard">
+      <Helmet>
+        <title>User Profile – MantrixLab</title>
+        <meta
+          name="description"
+          content="Manage your MantrixLab student profile, view your account settings, and track simulation learning progress."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {/* Main */}
       <main className="main-content">
         <div className="profile-container">

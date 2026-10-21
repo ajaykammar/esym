@@ -18,7 +18,7 @@ const DetailsSec = () => {
           {/* Right Section - Details */}
           <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-              3D Vartual Labs
+              3D Virtual Labs
             </h2>
             <p className="text-gray-600 mb-4">
               Experience interactive science and engineering experiments in a

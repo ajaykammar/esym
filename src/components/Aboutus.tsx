@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import avatar from "../Images/avtar.jpg";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Aboutus = () => {
   const team = [
@@ -167,6 +168,22 @@ const Aboutus = () => {
 
   return (
     <div className="w-full font-sans">
+      <Helmet>
+        <title>About Us – Transforming Science Education | MantrixLab</title>
+        <meta
+          name="description"
+          content="Learn about MantrixLab, India’s trailblazer in 3D digital simulation and interactive virtual labs designed to revolutionize STEM learning for schools and colleges."
+        />
+        <link rel="canonical" href="https://mantrixlab.com/about" />
+        <meta property="og:title" content="About Us – Transforming Science Education | MantrixLab" />
+        <meta
+          property="og:description"
+          content="Learn about MantrixLab, India’s trailblazer in 3D digital simulation and interactive virtual labs designed to revolutionize STEM learning for schools and colleges."
+        />
+        <meta property="og:url" content="https://mantrixlab.com/about" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-indigo-50 to-white py-6 px-6">
         <div className="max-w-5xl mx-auto">

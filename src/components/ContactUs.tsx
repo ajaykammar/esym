@@ -11,6 +11,7 @@ import { useMutation } from "@tanstack/react-query";
 import { ConctactUS } from "../services/Auth";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const initialState = {
   name: "",
@@ -75,6 +76,22 @@ const ContactUs = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
+      <Helmet>
+        <title>Contact Us – Get in Touch with MantrixLab</title>
+        <meta
+          name="description"
+          content="Contact MantrixLab for inquiries about 3D virtual science simulations, institutional partnerships, demo requests, and educational solutions."
+        />
+        <link rel="canonical" href="https://mantrixlab.com/contact" />
+        <meta property="og:title" content="Contact Us – Get in Touch with MantrixLab" />
+        <meta
+          property="og:description"
+          content="Contact MantrixLab for inquiries about 3D virtual science simulations, institutional partnerships, demo requests, and educational solutions."
+        />
+        <meta property="og:url" content="https://mantrixlab.com/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <h1 className="mx-20 my-5 text-xl font-bold">Contact Us</h1>
 
       <div className="w-[90%] sm:w-[60%] mb-20 rounded-lg bg-gray-800 text-white">

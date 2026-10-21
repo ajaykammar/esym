@@ -17,6 +17,8 @@ interface SimulationItem {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
+import { formatExperimentTitle } from "../utils/formatExperiment";
+
 const Chemistry: React.FC = () => {
   const { open } = useToggleStore();
 
@@ -25,7 +27,8 @@ const Chemistry: React.FC = () => {
   const Navigate = useNavigate();
   const UserNavigete = (simulation: any) => {
     if (Object.keys(JSON.parse(user)).length > 0) {
-      Navigate(`/simulation/${simulation?.id}`);
+      const experiment = formatExperimentTitle(simulation?.title);
+      Navigate(`/simulation/chemistry/${experiment}/`);
     } else {
       open();
       notify("Please log in to access the simulations.");
@@ -80,9 +83,7 @@ const Chemistry: React.FC = () => {
               "@type": "Course",
               "name": "${item.title}",
               "description": "${item.description}",
-              "url": "https://mantrixlab.com/simulation/chemistry/${item.title
-                .split(" ")
-                .join("-")}/${item.id}",
+              "url": "https://mantrixlab.com/simulation/chemistry/${formatExperimentTitle(item.title)}/",
               "educationalLevel": "${item.difficulty}",
               "genre": "${item.category}"
             }`;
