@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { researchers } from '../data/researchers';
+import { researchers } from '../Data/researchers';
 import { 
   ArrowLeft, 
   Mail, 

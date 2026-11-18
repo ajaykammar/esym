@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { ResearcherCard } from "./ResearcherCard";
-import { researchers } from "../data/researchers";
+import { researchers } from "../Data/researchers";
 import { Search, Filter, Users } from "lucide-react";
 
 export function ResearchersList() {
